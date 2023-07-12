@@ -1,0 +1,12 @@
+S:\Dev\Module3\Design_pattern\PatternCompositeExample\bin\Debug\net6.0\PatternCompositeExample.deps.json
+S:\Dev\Module3\Design_pattern\PatternCompositeExample\bin\Debug\net6.0\PatternCompositeExample.dll
+S:\Dev\Module3\Design_pattern\PatternCompositeExample\bin\Debug\net6.0\PatternCompositeExample.pdb
+S:\Dev\Module3\Design_pattern\PatternCompositeExample\obj\Debug\net6.0\PatternCompositeExample.csproj.AssemblyReference.cache
+S:\Dev\Module3\Design_pattern\PatternCompositeExample\obj\Debug\net6.0\PatternCompositeExample.GeneratedMSBuildEditorConfig.editorconfig
+S:\Dev\Module3\Design_pattern\PatternCompositeExample\obj\Debug\net6.0\PatternCompositeExample.AssemblyInfoInputs.cache
+S:\Dev\Module3\Design_pattern\PatternCompositeExample\obj\Debug\net6.0\PatternCompositeExample.AssemblyInfo.cs
+S:\Dev\Module3\Design_pattern\PatternCompositeExample\obj\Debug\net6.0\PatternCompositeExample.csproj.CoreCompileInputs.cache
+S:\Dev\Module3\Design_pattern\PatternCompositeExample\obj\Debug\net6.0\PatternCompositeExample.dll
+S:\Dev\Module3\Design_pattern\PatternCompositeExample\obj\Debug\net6.0\refint\PatternCompositeExample.dll
+S:\Dev\Module3\Design_pattern\PatternCompositeExample\obj\Debug\net6.0\PatternCompositeExample.pdb
+S:\Dev\Module3\Design_pattern\PatternCompositeExample\obj\Debug\net6.0\ref\PatternCompositeExample.dll
