@@ -12,7 +12,7 @@ namespace PatternCompositeExample
             : base(_op1, _op2)
         {
         }
-        public override int Evalue()
+        public override double Evalue()
         {
             return op1.Evalue() - op2.Evalue();
         }

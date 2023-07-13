@@ -10,3 +10,15 @@ S:\Dev\Module3\Design_pattern\PatternCompositeExample\obj\Debug\net6.0\PatternCo
 S:\Dev\Module3\Design_pattern\PatternCompositeExample\obj\Debug\net6.0\refint\PatternCompositeExample.dll
 S:\Dev\Module3\Design_pattern\PatternCompositeExample\obj\Debug\net6.0\PatternCompositeExample.pdb
 S:\Dev\Module3\Design_pattern\PatternCompositeExample\obj\Debug\net6.0\ref\PatternCompositeExample.dll
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\PatternCompositeExample\bin\Debug\net6.0\PatternCompositeExample.deps.json
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\PatternCompositeExample\bin\Debug\net6.0\PatternCompositeExample.dll
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\PatternCompositeExample\bin\Debug\net6.0\PatternCompositeExample.pdb
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\PatternCompositeExample\obj\Debug\net6.0\PatternCompositeExample.csproj.AssemblyReference.cache
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\PatternCompositeExample\obj\Debug\net6.0\PatternCompositeExample.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\PatternCompositeExample\obj\Debug\net6.0\PatternCompositeExample.AssemblyInfoInputs.cache
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\PatternCompositeExample\obj\Debug\net6.0\PatternCompositeExample.AssemblyInfo.cs
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\PatternCompositeExample\obj\Debug\net6.0\PatternCompositeExample.csproj.CoreCompileInputs.cache
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\PatternCompositeExample\obj\Debug\net6.0\PatternCompositeExample.dll
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\PatternCompositeExample\obj\Debug\net6.0\refint\PatternCompositeExample.dll
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\PatternCompositeExample\obj\Debug\net6.0\PatternCompositeExample.pdb
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\PatternCompositeExample\obj\Debug\net6.0\ref\PatternCompositeExample.dll

@@ -1,4 +1,6 @@
-﻿using PatternCompositeExample;
+﻿using Figure;
+using Figure.Forme;
+using PatternCompositeExample;
 
 namespace DesignPattern
 {
@@ -6,18 +8,8 @@ namespace DesignPattern
     {
         static void Main(string[] args)
         {
-            Addition operation1 = new Addition(new Nombre(5),new Nombre(6));
-            Nombre n = new Nombre(3);
-            Console.WriteLine(n.Formate());
-            Soustraction operation2 = new Soustraction(new Nombre(9),
-                new Addition(new Nombre(8),
-                    new Soustraction(new Nombre(5),
-                        new Addition(new Nombre(6),new Nombre(7)))));
-
-            Console.WriteLine(operation2.Formate());
-            //1+2-4+3
-            Addition ss = new Addition(new Soustraction(new Addition(new Nombre(1),new Nombre(2)),new Nombre(4)),new Nombre(3));
-            Console.WriteLine(ss.Formate());
+            Triangle t = new Triangle(new Paramettres(new double[] {0,0},new double[] {15,25}));
+            Console.WriteLine(t.ToStringBis());
         }
     }
 }

@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Figure\Figure.csproj" />
     <ProjectReference Include="..\PatternCompositeExample\PatternCompositeExample.csproj" />
   </ItemGroup>
 

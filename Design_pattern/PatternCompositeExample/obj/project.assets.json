@@ -8,23 +8,25 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Sora\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\gafacqueur\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "S:\\Dev\\Module3\\Design_pattern\\PatternCompositeExample\\PatternCompositeExample.csproj",
+      "projectUniqueName": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\PatternCompositeExample\\PatternCompositeExample.csproj",
       "projectName": "PatternCompositeExample",
-      "projectPath": "S:\\Dev\\Module3\\Design_pattern\\PatternCompositeExample\\PatternCompositeExample.csproj",
-      "packagesPath": "C:\\Users\\Sora\\.nuget\\packages\\",
-      "outputPath": "S:\\Dev\\Module3\\Design_pattern\\PatternCompositeExample\\obj\\",
+      "projectPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\PatternCompositeExample\\PatternCompositeExample.csproj",
+      "packagesPath": "C:\\Users\\gafacqueur\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\PatternCompositeExample\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Sora\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gafacqueur\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -66,7 +68,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }

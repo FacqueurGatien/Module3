@@ -8,12 +8,12 @@ namespace PatternCompositeExample
 {
     public class Nombre : Expression
     {
-        private int valeur;
-        public Nombre(int _valeur)
+        private readonly double valeur;
+        public Nombre(double _valeur)
         {
             valeur = _valeur;
         }
-        public override int Evalue()
+        public override double Evalue()
         {
             return valeur;
         }

@@ -2,6 +2,16 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Figure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Figure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Figure.dll": {}
+        }
+      },
       "PatternCompositeExample/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -15,6 +25,11 @@
     }
   },
   "libraries": {
+    "Figure/1.0.0": {
+      "type": "project",
+      "path": "../Figure/Figure.csproj",
+      "msbuildProject": "../Figure/Figure.csproj"
+    },
     "PatternCompositeExample/1.0.0": {
       "type": "project",
       "path": "../PatternCompositeExample/PatternCompositeExample.csproj",
@@ -23,27 +38,30 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Figure >= 1.0.0",
       "PatternCompositeExample >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sora\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\gafacqueur\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "S:\\Dev\\Module3\\Design_pattern\\DesignPattern\\DesignPattern.csproj",
+      "projectUniqueName": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\DesignPattern\\DesignPattern.csproj",
       "projectName": "DesignPattern",
-      "projectPath": "S:\\Dev\\Module3\\Design_pattern\\DesignPattern\\DesignPattern.csproj",
-      "packagesPath": "C:\\Users\\Sora\\.nuget\\packages\\",
-      "outputPath": "S:\\Dev\\Module3\\Design_pattern\\DesignPattern\\obj\\",
+      "projectPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\DesignPattern\\DesignPattern.csproj",
+      "packagesPath": "C:\\Users\\gafacqueur\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\DesignPattern\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Sora\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gafacqueur\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -58,8 +76,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "S:\\Dev\\Module3\\Design_pattern\\PatternCompositeExample\\PatternCompositeExample.csproj": {
-              "projectPath": "S:\\Dev\\Module3\\Design_pattern\\PatternCompositeExample\\PatternCompositeExample.csproj"
+            "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\Figure\\Figure.csproj": {
+              "projectPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\Figure\\Figure.csproj"
+            },
+            "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\PatternCompositeExample\\PatternCompositeExample.csproj": {
+              "projectPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\PatternCompositeExample\\PatternCompositeExample.csproj"
             }
           }
         }
@@ -89,7 +110,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }
