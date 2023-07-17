@@ -4,17 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Figure.Forme
+namespace FigureGeo
 {
-    public class Carre : Figure
+    public class Carre : Rectangle
     {
-        public Carre(Expression _param) 
-            : base(_param)
+        public double Cote { get; }
+        public Carre(double _x, double _y, double _cote)
+            : base(_x,_y,_cote, _cote)
         {
         }
-        public override string ToStringBis()
+        public override T Accept<T>(IVisiteurDeFigure<T> visiteur)
         {
-            throw new NotImplementedException();
+            return visiteur.Visite(this);
         }
     }
 }

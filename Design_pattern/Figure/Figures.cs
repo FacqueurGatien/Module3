@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace FigureGeo
 {
-    public class Rond : Figure
+    public class Figures : Figure
     {
-        public double Rayon { get;}
-        public Rond(double _x, double _y,double _rayon)
-            : base(_x,_y)
+        public List<Figure> FiguresList { get; }
+        public Figures(double _x,double _y,List<Figure> _figures)
+            : base(_x, _y) 
         {
-            Rayon = _rayon;
+            FiguresList = _figures;
         }
         public override T Accept<T>(IVisiteurDeFigure<T> visiteur)
         {
@@ -20,4 +20,3 @@ namespace FigureGeo
         }
     }
 }
-

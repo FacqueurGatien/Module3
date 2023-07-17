@@ -4,14 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Figure
+namespace FigureGeo
 {
-    public abstract class Figure:Expression
+    public abstract class Figure
     {
-        protected Expression paramettres;
-        public Figure(Expression _paramettres)
+        public double X { get; }
+        public double Y { get; }
+        public Figure(double _x, double _y)
         {
-            paramettres = _paramettres;
+            X = _x;
+            Y = _y;
         }
+        public abstract T Accept<T>(IVisiteurDeFigure<T> visiteur);
     }
 }

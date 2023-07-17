@@ -4,18 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Figure.Forme
+namespace FigureGeo
 {
     public class Rectangle : Figure
     {
-        public Rectangle(Expression _params) 
-            : base(_params)
+        public double Longueur { get; }
+        public double Largeur { get; }
+        public Rectangle(double _x, double _y, double _longueur, double _largeur)
+            : base(_x, _y)
         {
+            Longueur = _longueur;
+            Largeur = _largeur;
         }
-
-        public override string ToStringBis()
+        public override T Accept<T>(IVisiteurDeFigure<T> visiteur)
         {
-            throw new NotImplementedException();
+            return visiteur.Visite(this);
         }
     }
 }
