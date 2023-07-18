@@ -29,10 +29,6 @@ namespace DesignPattern
         public string Visite(Figures figures)
         {
             string res = "Ensemble de figure composer des figures suivante : \n\n";
-            foreach (Figure fig in figures.FiguresList)
-            {
-                res += fig.Accept(this);
-            }
             return res;
         }
     }

@@ -12,8 +12,14 @@ namespace FigureGeo
         public Carre(double _x, double _y, double _cote)
             : base(_x,_y,_cote, _cote)
         {
+            Cote = _cote;
+
         }
         public override T Accept<T>(IVisiteurDeFigure<T> visiteur)
+        {
+            return visiteur.Visite(this);
+        }
+        public override string Accept(IVisiteurDeFigure<string> visiteur)
         {
             return visiteur.Visite(this);
         }
