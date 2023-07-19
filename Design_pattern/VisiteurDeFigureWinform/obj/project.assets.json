@@ -27,25 +27,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gafacqueur\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\izaya\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\VisiteurDeFigureWinform\\VisiteurDeFigureWinform.csproj",
+      "projectUniqueName": "E:\\SoraDev\\Module3\\Design_pattern\\VisiteurDeFigureWinform\\VisiteurDeFigureWinform.csproj",
       "projectName": "VisiteurDeFigureWinform",
-      "projectPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\VisiteurDeFigureWinform\\VisiteurDeFigureWinform.csproj",
-      "packagesPath": "C:\\Users\\gafacqueur\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\VisiteurDeFigureWinform\\obj\\",
+      "projectPath": "E:\\SoraDev\\Module3\\Design_pattern\\VisiteurDeFigureWinform\\VisiteurDeFigureWinform.csproj",
+      "packagesPath": "C:\\Users\\izaya\\.nuget\\packages\\",
+      "outputPath": "E:\\SoraDev\\Module3\\Design_pattern\\VisiteurDeFigureWinform\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\gafacqueur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\izaya\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -60,8 +58,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\Figure\\Figure.csproj": {
-              "projectPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\Figure\\Figure.csproj"
+            "E:\\SoraDev\\Module3\\Design_pattern\\Figure\\Figure.csproj": {
+              "projectPath": "E:\\SoraDev\\Module3\\Design_pattern\\Figure\\Figure.csproj"
             }
           }
         }
