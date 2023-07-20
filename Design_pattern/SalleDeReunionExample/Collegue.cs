@@ -6,44 +6,37 @@ using System.Threading.Tasks;
 
 namespace SalleDeReunionExample
 {
+    /// <summary>
+    /// Superclasse abstraite
+    /// </summary>
     public abstract class Collegue
     {
         protected string Nom { get; }
+        /// <summary>
+        /// Reference du <seealso cref="IMediateur"/> permettant de mettre les diferenttes classes en relation
+        /// </summary>
         protected IMediateur Mediateur { get; }
-        protected List<Reservation> Reservations { get; }
 
+        /// <summary>
+        /// Constructeur de la superclasse <see cref="Collegue"/>
+        /// </summary>
+        /// <param name="_mediateur">Instance du <see cref="IMediateur"/> permettant de mettre les diferenttes classes en relation</param>
+        /// <param name="_nom">Nom qui est un attibut commun à tout les enfant de la superclass <see cref="Collegue"/></param>
         public Collegue(IMediateur _mediateur,string _nom)
         {
             Mediateur = _mediateur;
             Nom = _nom;
-            Reservations = new List<Reservation>();
         }
+        /// <summary>
+        /// Methode abstract qu'auront tout les enfant de <see cref="Collegue"/> et qui permettra de demander au mediateur l'annulation d'une <seealso cref="Reservation"/> sur la base d'une <seealso cref="Periode"/>
+        /// </summary>
+        /// <param name="_periode">Periode de date de la <see cref="Reservation"/> à annuler</param>
+        public abstract void AnnulerReservation(Periode _periode);
 
-        public void AjouterReservation(Reservation _reservation) => Reservations.Add(_reservation);
-        public Reservation? RecupererReservation(Reservation _reservation) => Reservations.Find(r => r.Periode.DateDebut == _reservation.Periode.DateDebut && r.Periode.DateFin == r.Periode.DateFin && r.Employee == _reservation.Employee && r.Salle == _reservation.Salle);
-        public List<Reservation> RecupererReservations() => Reservations;
-        public void EnleverReservation(Reservation _reservation) => Reservations.Remove(_reservation);
-        public void AnnulerReservation(Periode _periode) => Mediateur.AnnulerReservation(this, _periode);
-        public string ToStringReservation()
-        {
-            string result = "";
-            string separateur = "_________________________";
-            if(Reservations.Count > 0)
-            {
-                foreach (Reservation reservation in Reservations)
-                {
-                    result += string.Format("{0}\nInformation sur la salle : \n{1}\n\nInformation sur l'employée : \n{2}\nPeriode de reservation : \n{3}\n{0}\n",
-                        separateur,reservation.Salle.ToStringCollegue(),reservation.Employee.ToStringCollegue(),reservation.Periode.ToStringPeriode(),separateur);
-                }
-            }
-            else
-            {
-                result += string.Format("Information concernant cette {0} : \n{1}\nAucune reservation\n{2}\n", GetType().Name, ToStringCollegue(), separateur);
- 
-            }
-            return result;
-        }
-
+        /// <summary>
+        /// Classe abstract qui permet d'implementer le retour textuelle des caracteristique de chaque Enfant de la superclase <see cref="Collegue"/>
+        /// </summary>
+        /// <returns>Un <see cref="string"/> formaté</returns>
         public abstract string ToStringCollegue();
 
     }

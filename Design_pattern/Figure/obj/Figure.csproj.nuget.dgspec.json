@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\SoraDev\\Module3\\Design_pattern\\Figure\\Figure.csproj": {}
+    "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\Figure\\Figure.csproj": {}
   },
   "projects": {
-    "E:\\SoraDev\\Module3\\Design_pattern\\Figure\\Figure.csproj": {
+    "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\Figure\\Figure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\SoraDev\\Module3\\Design_pattern\\Figure\\Figure.csproj",
+        "projectUniqueName": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\Figure\\Figure.csproj",
         "projectName": "Figure",
-        "projectPath": "E:\\SoraDev\\Module3\\Design_pattern\\Figure\\Figure.csproj",
-        "packagesPath": "C:\\Users\\izaya\\.nuget\\packages\\",
-        "outputPath": "E:\\SoraDev\\Module3\\Design_pattern\\Figure\\obj\\",
+        "projectPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\Figure\\Figure.csproj",
+        "packagesPath": "C:\\Users\\gafacqueur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\Figure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\izaya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gafacqueur\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

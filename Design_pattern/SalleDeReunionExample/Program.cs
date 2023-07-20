@@ -28,20 +28,14 @@
             e3.ReserverSalle(new Periode(new DateTime(2024, 1, 1, 7, 30, 0), new DateTime(2024, 1, 1, 10, 0, 0)), new List<EnumEquipement> { EnumEquipement.Ordinateur }, 10);
             e4.ReserverSalle(new Periode(new DateTime(2024, 1, 1, 7, 30, 0), new DateTime(2024, 1, 1, 10, 0, 0)), new List<EnumEquipement> { EnumEquipement.Ordinateur }, 10);
 
-            Console.WriteLine(e1.ToStringReservation());
-            Console.WriteLine(e2.ToStringReservation());
-            Console.WriteLine(e3.ToStringReservation());
-            Console.WriteLine(e4.ToStringReservation());
+            Console.WriteLine(((Mediateur)mediateur).ToStringReservation());
 
             e1.AnnulerReservation(new Periode(new DateTime(2023, 12, 31, 10, 0, 0), new DateTime(2023, 12, 31, 22, 0, 0)));
             e2.AnnulerReservation(new Periode(new DateTime(2024, 1, 1, 7, 30, 0), new DateTime(2024, 1, 1, 10, 0, 0)));
             e3.AnnulerReservation(new Periode(new DateTime(2024, 1, 1, 7, 30, 0), new DateTime(2024, 1, 1, 10, 0, 0)));
             e4.AnnulerReservation(new Periode(new DateTime(2024, 1, 1, 7, 30, 0), new DateTime(2024, 1, 1, 10, 0, 0)));
 
-            Console.WriteLine(e1.ToStringReservation());
-            Console.WriteLine(e2.ToStringReservation());
-            Console.WriteLine(e3.ToStringReservation());
-            Console.WriteLine(e4.ToStringReservation());
+            Console.WriteLine(((Mediateur)mediateur).ToStringReservation());
 
             //Console.WriteLine(((Mediateur)mediateur).ToStringSalles()+ "_______________________________________\n\n\n" + ((Mediateur)mediateur).ToStringEmployees() + "\n_______________________________________\n");
 

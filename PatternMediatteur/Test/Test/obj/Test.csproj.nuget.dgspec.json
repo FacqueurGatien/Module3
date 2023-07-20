@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documents\\Test\\Test\\Test.csproj": {}
+    "C:\\Users\\gafacqueur\\Documents\\Module3\\PatternMediatteur\\Test\\Test\\Test.csproj": {}
   },
   "projects": {
-    "D:\\Documents\\Test\\Test\\Test.csproj": {
+    "C:\\Users\\gafacqueur\\Documents\\Module3\\PatternMediatteur\\Test\\Test\\Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documents\\Test\\Test\\Test.csproj",
+        "projectUniqueName": "C:\\Users\\gafacqueur\\Documents\\Module3\\PatternMediatteur\\Test\\Test\\Test.csproj",
         "projectName": "Test",
-        "projectPath": "D:\\Documents\\Test\\Test\\Test.csproj",
-        "packagesPath": "C:\\Users\\izaya\\.nuget\\packages\\",
-        "outputPath": "D:\\Documents\\Test\\Test\\obj\\",
+        "projectPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\PatternMediatteur\\Test\\Test\\Test.csproj",
+        "packagesPath": "C:\\Users\\gafacqueur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\PatternMediatteur\\Test\\Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\izaya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gafacqueur\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
