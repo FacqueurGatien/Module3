@@ -15,6 +15,9 @@ namespace SalleDeReunionExample
         /// Capacite en nombre de personne
         /// </summary>
         private int Capacite { get; }
+        /// <summary>
+        /// Liste des equipement dont la salle dispose
+        /// </summary>
         private List<EnumEquipement> Equipements { get; }
 
         /// <summary>

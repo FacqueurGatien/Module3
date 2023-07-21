@@ -17,7 +17,7 @@
             Employee e3 = new Employee(mediateur, "ESTJ003", "CCC", "CCCCCCC");
             Employee e4 = new Employee(mediateur, "ESTJ004", "DDD", "DDDDDDD");
             Employee e5 = new Employee(mediateur, "ESTJ005", "EEE", "EEEEEEE");
-            Employee e6 = new Employee(mediateur, "ESTJ006", "FFF", "FFFFFFF");
+            Employee e6 = new Employee(mediateur, "ESTJ006", "FFF", "FFFFFFF"); 
 
             ((Mediateur)mediateur).Salles.AddRange(new List<SalleDeReunion>() { s1, s2, s3, s4 });
             ((Mediateur)mediateur).Employees.AddRange(new List<Employee>() { e1, e2, e3, e4, e5, e6 });

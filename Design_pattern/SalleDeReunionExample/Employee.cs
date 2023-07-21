@@ -15,15 +15,18 @@ namespace SalleDeReunionExample
         /// Une chaine de caractere qui permet d'identifier un <see cref="Employee"/> de facon Unique
         /// </summary>
         private string Matricule { get; }
+        /// <summary>
+        /// Prenom d'un <see cref="Employee"/>
+        /// </summary>
         private string Prenom { get; }
 
         /// <summary>
         /// Constructeur d'un <see cref="Employee"/>
         /// </summary>
-        /// <param name="_mediateur"></param>
-        /// <param name="_matricule"></param>
-        /// <param name="_nom"></param>
-        /// <param name="_prenom"></param>
+        /// <param name="_mediateur">Instance du <see cref="IMediateur"/></param>
+        /// <param name="_matricule">Une chaine de caractere qui permet d'identifier un <see cref="Employee"/> de facon Unique</param>
+        /// <param name="_nom"><see cref="Nom"/> d'un <see cref="Employee"/></param>
+        /// <param name="_prenom">Prenom d'un <see cref="Employee"/></param>
         public Employee(IMediateur _mediateur,string _matricule, string _nom, string _prenom)
             :base(_mediateur,_nom)
         {
@@ -37,12 +40,12 @@ namespace SalleDeReunionExample
         /// <param name="_periode">Periode de date souhaité</param>
         /// <param name="_equipements">Liste d'equipement exigée que la <see cref="SalleDeReunion"/> doit posseder</param>
         /// <param name="_capacite">Capacité d'acceuille necessaire de la <see cref="SalleDeReunion"/></param>
-        public void ReserverSalle(Periode _periode, List<EnumEquipement> _equipements, int _capacite) => Mediateur.ReserverSalle(this, _periode, _equipements, _capacite);
+        public bool ReserverSalle(Periode _periode, List<EnumEquipement> _equipements, int _capacite) => Mediateur.ReserverSalle(this, _periode, _equipements, _capacite);
 
         /// <summary>
         /// Permet de demander aux <see cref="IMediateur"/> d'annuler une <seealso cref="Reservation"/> en se basant sur un <seealso cref="Employee"/> et une <seealso cref="Periode"/>
         /// </summary>
-        /// <param name="_periode">Periode de date(<see cref="DateTime"/>) de la <seealso cref="Reservation"/> à annuler</param>
+        /// <param name="_periode"><see cref="Periode"/> de date(<see cref="DateTime"/>) de la <seealso cref="Reservation"/> à annuler</param>
         public override void AnnulerReservation(Periode _periode) => Mediateur.AnnulerReservation(this, _periode);
 
         /// <summary>

@@ -8,13 +8,37 @@ namespace SalleDeReunionExample
 {
     public class Periode
     {
+        /// <summary>
+        /// Date(<see cref="DateTime"/>) correspondant au commencement de la <seealso cref="Periode"/>
+        /// </summary>
         public DateTime DateDebut { get; }
+        /// <summary>
+        /// Date(<see cref="DateTime"/>) correspondant à la fin de la <seealso cref="Periode"/>
+        /// </summary>
         public DateTime DateFin { get; }
+        /// <summary>
+        /// Constructeur d'une <see cref="Periode"/>
+        /// </summary>
+        /// <param name="_dateDebut">Date(<see cref="DateTime"/>) correspondant au commencement de la <seealso cref="Periode"/></param>
+        /// <param name="_dateFin">Date(<see cref="DateTime"/>) correspondant à la fin de la <seealso cref="Periode"/></param>
+        /// <exception cref="ArgumentException"></exception>
         public Periode(DateTime _dateDebut,DateTime _dateFin)
         {
             DateDebut = _dateDebut;
-            DateFin = _dateFin;
+            if (_dateFin>_dateDebut)
+            {
+                DateFin = _dateFin;
+            }
+            else
+            {
+                throw new ArgumentException("La date de fin doit succeder la date de debut de la reservation");
+            }
+
         }
+        /// <summary>
+        /// Permet le retour textuel des caracteristique d'une <see cref="Periode"/>
+        /// </summary>
+        /// <returns>Un <see cref="string"/> formaté</returns>
         public string ToStringPeriode()=> string.Format("{0}\n{1}\n", DateDebut.ToString(), DateFin.ToString());
 
     }

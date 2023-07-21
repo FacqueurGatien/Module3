@@ -9,17 +9,39 @@ namespace SalleDeReunionExample
     public class Mediateur : IMediateur
     {
         //Todo Ajouter une fonction pour ajouter les employee salle ou reservation  sans passer par le public
+        //Todo Ajouter un Notify qui averti les employé de la création d'une nouvelle salle
+
+        /// <summary>
+        /// <see cref="List{T}"/> contenant l'ensemble des <seealso cref="SalleDeReunion"/>
+        /// </summary>
         public List<SalleDeReunion> Salles { get; }
+        /// <summary>
+        /// <see cref="List{T}"/> contenant l'ensemble des <seealso cref="Employee"/>
+        /// </summary>
         public List<Employee> Employees { get; }
+        /// <summary>
+        /// <see cref="List{T}"/> contenant l'ensemble des <seealso cref="Reservation"/>
+        /// </summary>
         public List<Reservation> Reservations { get; }
+
+        /// <summary>
+        /// Constructeur du <see cref="Mediateur"/>
+        /// </summary>
         public Mediateur()
         {
             Salles = new List<SalleDeReunion>();
             Employees = new List<Employee>();
             Reservations = new List<Reservation>();
         }
-
-        public Reservation? ReserverSalle(Employee _employee, Periode _periode, List<EnumEquipement> _equipements, int _capacite)
+        /// <summary>
+        /// Permet d'effectuer la <see cref="Reservation"/> d'une <seealso cref="SalleDeReunion"/> sous certaines condition
+        /// </summary>
+        /// <param name="_employee"><see cref="Employee"/> qui effectue la <seealso cref="Reservation"/></param>
+        /// <param name="_periode"><see cref="Periode"/> de date(<see cref="DateTime"/>) de la <seealso cref="Reservation"/></param>
+        /// <param name="_equipements">Liste d'equipement que la <see cref="SalleDeReunion"/> doit disposer</param>
+        /// <param name="_capacite">Capacité d'acceuille necessaire de la <see cref="SalleDeReunion"/></param>
+        /// <returns></returns>
+        public bool ReserverSalle(Employee _employee, Periode _periode, List<EnumEquipement> _equipements, int _capacite)
         {
             if (Salles.Count > 0 && Employees.Count > 0)
             {
@@ -31,12 +53,17 @@ namespace SalleDeReunionExample
                     {
                         Reservation reservation = new Reservation(salle, _employee, _periode);
                         AjouterReservation(reservation);
-                        return reservation;
+                        return true;
                     }
                 }
             }
-            return null;
+            return false;
         }
+        /// <summary>
+        /// Permet l'annulation d'une <see cref="Reservation"/> de <seealso cref="SalleDeReunion"/> en se basant sur une <seealso cref="SalleDeReunion"/> et une <seealso cref="Periode"/>
+        /// </summary>
+        /// <param name="_salle"><see cref="SalleDeReunion"/> concerner par la <seealso cref="Reservation"/></param>
+        /// <param name="_periode"><see cref="Periode"/> concerner par la <seealso cref="Reservation"/></param>
         public void AnnulerReservation(SalleDeReunion _salle, Periode _periode)
         {
             Reservation? reservation = Reservations.Find(r=>r.Periode.DateDebut==_periode.DateDebut && r.Periode.DateFin==_periode.DateFin && r.Salle==_salle);
@@ -45,6 +72,11 @@ namespace SalleDeReunionExample
                 EnleverReservation(reservation);
             }
         }
+        /// <summary>
+        /// Permet l'annulation d'une <see cref="Reservation"/> de <seealso cref="SalleDeReunion"/> en se basant sur un <seealso cref="Employee"/> et une <seealso cref="Periode"/>
+        /// </summary>
+        /// <param name="_salle"><see cref="SalleDeReunion"/> concerner par la <seealso cref="Reservation"/></param>
+        /// <param name="_periode"><see cref="Periode"/> concerner par la <seealso cref="Reservation"/></param>
         public void AnnulerReservation(Employee _employee, Periode _periode)
         {
             Reservation? reservation = Reservations.Find(r => r.Periode.DateDebut == _periode.DateDebut && r.Periode.DateFin == _periode.DateFin && r.Employee==_employee);
@@ -53,6 +85,12 @@ namespace SalleDeReunionExample
                 EnleverReservation(reservation);
             }
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="_salle"></param>
+        /// <param name="_periode"></param>
+        /// <returns></returns>
         public EnumDisponibilite VerifierDisponibilite(SalleDeReunion _salle,Periode _periode)
         {
             foreach (Reservation reservation in Reservations)
@@ -67,10 +105,21 @@ namespace SalleDeReunionExample
             return EnumDisponibilite.Disponible;
         }
 
-
+        /// <summary>
+        /// Permet d'ajouter une <see cref="Reservation"/> a la liste <seealso cref="Reservations"/>
+        /// </summary>
+        /// <param name="_reservation"></param>
         public void AjouterReservation(Reservation _reservation) => Reservations.Add(_reservation);
+        /// <summary>
+        /// Permet d'ôter une <see cref="Reservation"/> de la liste <seealso cref="Reservations"/>
+        /// </summary>
+        /// <param name="_reservation"></param>
         private void EnleverReservation(Reservation _reservation) => Reservations.Remove(_reservation);
 
+        /// <summary>
+        /// Permet de renvoyer textuellement les caracteristiques de toute les <see cref="SalleDeReunion"/>
+        /// </summary>
+        /// <returns>Un <see cref="string"/> formaté</returns>
         public string ToStringSalles()
         {
             string result = "Liste des salles\n-------------------\n";
@@ -80,6 +129,10 @@ namespace SalleDeReunionExample
             }
             return result;
         }
+        /// <summary>
+        /// Permet de renvoyer textuellement les caracteristiques de tout les <see cref="Employee"/>
+        /// </summary>
+        /// <returns>Un <see cref="string"/> formaté</returns>
         public string ToStringEmployees()
         {
             string result = "Liste des employees\n-------------------\n";
@@ -89,6 +142,10 @@ namespace SalleDeReunionExample
             }
             return result;
         }
+        /// <summary>
+        /// Permet de renvoyer textuellement les caracteristiques de toute les <see cref="Reservation"/>
+        /// </summary>
+        /// <returns>Un <see cref="string"/> formaté</returns>
         public string ToStringReservation()
         {
             string result = "";

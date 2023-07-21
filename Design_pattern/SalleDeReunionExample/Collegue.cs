@@ -11,6 +11,9 @@ namespace SalleDeReunionExample
     /// </summary>
     public abstract class Collegue
     {
+        /// <summary>
+        /// Nom qui est un attibut commun à tout les enfant de la superclass
+        /// </summary>
         protected string Nom { get; }
         /// <summary>
         /// Reference du <seealso cref="IMediateur"/> permettant de mettre les diferenttes classes en relation

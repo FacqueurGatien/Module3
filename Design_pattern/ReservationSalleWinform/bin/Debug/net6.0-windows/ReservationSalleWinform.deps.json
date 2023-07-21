@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ReservationSalleWinform/1.0.0": {
+        "dependencies": {
+          "SalleDeReunionExample": "1.0.0"
+        },
+        "runtime": {
+          "ReservationSalleWinform.dll": {}
+        }
+      },
+      "SalleDeReunionExample/1.0.0": {
+        "runtime": {
+          "SalleDeReunionExample.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ReservationSalleWinform/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SalleDeReunionExample/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
