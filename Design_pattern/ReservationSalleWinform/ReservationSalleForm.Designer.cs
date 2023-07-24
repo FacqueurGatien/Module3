@@ -55,16 +55,16 @@ namespace ReservationSalleWinform
             labelEployeesListe = new Label();
             CBEmployeesListe = new ComboBox();
             labelPeriodeEmployee = new Label();
-            comboBox1 = new ComboBox();
+            PeriodeEmployee = new ComboBox();
             labelSalleReserve = new Label();
-            textBox1 = new TextBox();
             labelSalles = new Label();
             CBsalleListe = new ComboBox();
             labelPeriodeSalle = new Label();
-            comboBox3 = new ComboBox();
+            PeriodeSalle = new ComboBox();
             labelEmployeeConcerné = new Label();
-            textBox2 = new TextBox();
             labelEquipements = new Label();
+            CBEmployeeSalle = new ComboBox();
+            CBSalleEmployee = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)NUDcapacite).BeginInit();
             ((System.ComponentModel.ISupportInitialize)NUDheureDebut).BeginInit();
             ((System.ComponentModel.ISupportInitialize)NUDminuteDebut).BeginInit();
@@ -89,7 +89,7 @@ namespace ReservationSalleWinform
             CBemployeeR.Name = "CBemployeeR";
             CBemployeeR.Size = new Size(249, 23);
             CBemployeeR.TabIndex = 1;
-            CBemployeeR.SelectedIndexChanged += CBemployeeR_SelectedIndexChanged;
+            CBemployeeR.SelectedIndexChanged += SelectionneEmployeePourReservation;
             // 
             // capaciteLabel
             // 
@@ -108,6 +108,7 @@ namespace ReservationSalleWinform
             NUDcapacite.Size = new Size(94, 23);
             NUDcapacite.TabIndex = 3;
             NUDcapacite.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            NUDcapacite.ValueChanged += ValueChange;
             // 
             // CBXequipement1
             // 
@@ -195,7 +196,7 @@ namespace ReservationSalleWinform
             DTperiodeDebut.Name = "DTperiodeDebut";
             DTperiodeDebut.Size = new Size(200, 23);
             DTperiodeDebut.TabIndex = 13;
-            DTperiodeDebut.ValueChanged += DTperiodeDebut_ValueChanged;
+            DTperiodeDebut.ValueChanged += ValueChange;
             // 
             // NUDheureDebut
             // 
@@ -206,7 +207,7 @@ namespace ReservationSalleWinform
             NUDheureDebut.Size = new Size(46, 23);
             NUDheureDebut.TabIndex = 14;
             NUDheureDebut.Value = new decimal(new int[] { 6, 0, 0, 0 });
-            NUDheureDebut.ValueChanged += NUDheureDebut_ValueChanged;
+            NUDheureDebut.ValueChanged += ValueChange;
             // 
             // NUDminuteDebut
             // 
@@ -216,7 +217,7 @@ namespace ReservationSalleWinform
             NUDminuteDebut.Name = "NUDminuteDebut";
             NUDminuteDebut.Size = new Size(62, 23);
             NUDminuteDebut.TabIndex = 15;
-            NUDminuteDebut.ValueChanged += NUDminuteDebut_ValueChanged;
+            NUDminuteDebut.ValueChanged += ValueChange;
             // 
             // labelFin
             // 
@@ -233,7 +234,7 @@ namespace ReservationSalleWinform
             DTperiodeFin.Name = "DTperiodeFin";
             DTperiodeFin.Size = new Size(200, 23);
             DTperiodeFin.TabIndex = 17;
-            DTperiodeFin.ValueChanged += DTperiodeFin_ValueChanged;
+            DTperiodeFin.ValueChanged += ValueChange;
             // 
             // NUDheureFin
             // 
@@ -244,7 +245,7 @@ namespace ReservationSalleWinform
             NUDheureFin.Size = new Size(46, 23);
             NUDheureFin.TabIndex = 18;
             NUDheureFin.Value = new decimal(new int[] { 6, 0, 0, 0 });
-            NUDheureFin.ValueChanged += NUDheureFin_ValueChanged;
+            NUDheureFin.ValueChanged += ValueChange;
             // 
             // NUDminuteFin
             // 
@@ -254,7 +255,8 @@ namespace ReservationSalleWinform
             NUDminuteFin.Name = "NUDminuteFin";
             NUDminuteFin.Size = new Size(62, 23);
             NUDminuteFin.TabIndex = 19;
-            NUDminuteFin.ValueChanged += NUDminuteFin_ValueChanged;
+            NUDminuteFin.Value = new decimal(new int[] { 15, 0, 0, 0 });
+            NUDminuteFin.ValueChanged += ValueChange;
             // 
             // labelSalleDispo
             // 
@@ -299,10 +301,11 @@ namespace ReservationSalleWinform
             // 
             CBEmployeesListe.DropDownStyle = ComboBoxStyle.DropDownList;
             CBEmployeesListe.FormattingEnabled = true;
-            CBEmployeesListe.Location = new Point(514, 27);
+            CBEmployeesListe.Location = new Point(471, 27);
             CBEmployeesListe.Name = "CBEmployeesListe";
-            CBEmployeesListe.Size = new Size(189, 23);
+            CBEmployeesListe.Size = new Size(249, 23);
             CBEmployeesListe.TabIndex = 24;
+            CBEmployeesListe.SelectedIndexChanged += CBEmployeesListe_SelectedIndexChanged;
             // 
             // labelPeriodeEmployee
             // 
@@ -313,14 +316,15 @@ namespace ReservationSalleWinform
             labelPeriodeEmployee.TabIndex = 25;
             labelPeriodeEmployee.Text = "Periode";
             // 
-            // comboBox1
+            // PeriodeEmployee
             // 
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(514, 79);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(187, 23);
-            comboBox1.TabIndex = 26;
+            PeriodeEmployee.DropDownStyle = ComboBoxStyle.DropDownList;
+            PeriodeEmployee.FormattingEnabled = true;
+            PeriodeEmployee.Location = new Point(471, 79);
+            PeriodeEmployee.Name = "PeriodeEmployee";
+            PeriodeEmployee.Size = new Size(247, 23);
+            PeriodeEmployee.TabIndex = 26;
+            PeriodeEmployee.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // labelSalleReserve
             // 
@@ -330,14 +334,6 @@ namespace ReservationSalleWinform
             labelSalleReserve.Size = new Size(74, 15);
             labelSalleReserve.TabIndex = 27;
             labelSalleReserve.Text = "Salle Reservé";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(514, 135);
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(187, 23);
-            textBox1.TabIndex = 28;
             // 
             // labelSalles
             // 
@@ -352,10 +348,11 @@ namespace ReservationSalleWinform
             // 
             CBsalleListe.DropDownStyle = ComboBoxStyle.DropDownList;
             CBsalleListe.FormattingEnabled = true;
-            CBsalleListe.Location = new Point(514, 198);
+            CBsalleListe.Location = new Point(471, 198);
             CBsalleListe.Name = "CBsalleListe";
-            CBsalleListe.Size = new Size(187, 23);
+            CBsalleListe.Size = new Size(247, 23);
             CBsalleListe.TabIndex = 30;
+            CBsalleListe.SelectedIndexChanged += CBsalleListe_SelectedIndexChanged;
             // 
             // labelPeriodeSalle
             // 
@@ -366,14 +363,15 @@ namespace ReservationSalleWinform
             labelPeriodeSalle.TabIndex = 31;
             labelPeriodeSalle.Text = "Periode";
             // 
-            // comboBox3
+            // PeriodeSalle
             // 
-            comboBox3.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(514, 258);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(187, 23);
-            comboBox3.TabIndex = 32;
+            PeriodeSalle.DropDownStyle = ComboBoxStyle.DropDownList;
+            PeriodeSalle.FormattingEnabled = true;
+            PeriodeSalle.Location = new Point(471, 258);
+            PeriodeSalle.Name = "PeriodeSalle";
+            PeriodeSalle.Size = new Size(247, 23);
+            PeriodeSalle.TabIndex = 32;
+            PeriodeSalle.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
             // 
             // labelEmployeeConcerné
             // 
@@ -384,13 +382,6 @@ namespace ReservationSalleWinform
             labelEmployeeConcerné.TabIndex = 33;
             labelEmployeeConcerné.Text = "Employée reservant";
             // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(514, 321);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(187, 23);
-            textBox2.TabIndex = 34;
-            // 
             // labelEquipements
             // 
             labelEquipements.AutoSize = true;
@@ -400,21 +391,39 @@ namespace ReservationSalleWinform
             labelEquipements.TabIndex = 35;
             labelEquipements.Text = "Equipements";
             // 
+            // CBEmployeeSalle
+            // 
+            CBEmployeeSalle.DropDownStyle = ComboBoxStyle.DropDownList;
+            CBEmployeeSalle.FormattingEnabled = true;
+            CBEmployeeSalle.Location = new Point(471, 138);
+            CBEmployeeSalle.Name = "CBEmployeeSalle";
+            CBEmployeeSalle.Size = new Size(247, 23);
+            CBEmployeeSalle.TabIndex = 36;
+            // 
+            // CBSalleEmployee
+            // 
+            CBSalleEmployee.DropDownStyle = ComboBoxStyle.DropDownList;
+            CBSalleEmployee.FormattingEnabled = true;
+            CBSalleEmployee.Location = new Point(471, 323);
+            CBSalleEmployee.Name = "CBSalleEmployee";
+            CBSalleEmployee.Size = new Size(247, 23);
+            CBSalleEmployee.TabIndex = 37;
+            // 
             // ReservationSalleForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(732, 368);
+            Controls.Add(CBSalleEmployee);
+            Controls.Add(CBEmployeeSalle);
             Controls.Add(labelEquipements);
-            Controls.Add(textBox2);
             Controls.Add(labelEmployeeConcerné);
-            Controls.Add(comboBox3);
+            Controls.Add(PeriodeSalle);
             Controls.Add(labelPeriodeSalle);
             Controls.Add(CBsalleListe);
             Controls.Add(labelSalles);
-            Controls.Add(textBox1);
             Controls.Add(labelSalleReserve);
-            Controls.Add(comboBox1);
+            Controls.Add(PeriodeEmployee);
             Controls.Add(labelPeriodeEmployee);
             Controls.Add(CBEmployeesListe);
             Controls.Add(labelEployeesListe);
@@ -482,15 +491,15 @@ namespace ReservationSalleWinform
         private Label labelEployeesListe;
         private ComboBox CBEmployeesListe;
         private Label labelPeriodeEmployee;
-        private ComboBox comboBox1;
+        private ComboBox PeriodeEmployee;
         private Label labelSalleReserve;
-        private TextBox textBox1;
         private Label labelSalles;
         private ComboBox CBsalleListe;
         private Label labelPeriodeSalle;
-        private ComboBox comboBox3;
+        private ComboBox PeriodeSalle;
         private Label labelEmployeeConcerné;
-        private TextBox textBox2;
         private Label labelEquipements;
+        private ComboBox CBEmployeeSalle;
+        private ComboBox CBSalleEmployee;
     }
 }

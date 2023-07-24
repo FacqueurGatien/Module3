@@ -25,7 +25,7 @@ namespace SalleDeReunionExample
         public Periode(DateTime _dateDebut,DateTime _dateFin)
         {
             DateDebut = _dateDebut;
-            if (_dateFin>_dateDebut)
+            if (_dateFin>_dateDebut&& _dateDebut>DateTime.Now)
             {
                 DateFin = _dateFin;
             }
@@ -40,6 +40,7 @@ namespace SalleDeReunionExample
         /// </summary>
         /// <returns>Un <see cref="string"/> formaté</returns>
         public string ToStringPeriode()=> string.Format("{0}\n{1}\n", DateDebut.ToString(), DateFin.ToString());
+        public string Reference() => string.Format("{0} - {1}", DateDebut.ToString(), DateFin.ToString());
 
     }
 }
