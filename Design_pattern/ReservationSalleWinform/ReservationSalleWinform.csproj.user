@@ -7,6 +7,9 @@
     <Compile Update="DatePickerUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="FenetreListeEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="FormulaireReservationUC.cs">
       <SubType>UserControl</SubType>
     </Compile>

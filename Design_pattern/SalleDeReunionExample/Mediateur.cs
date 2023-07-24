@@ -59,6 +59,23 @@ namespace SalleDeReunionExample
             }
             return false;
         }
+        public List<SalleDeReunion> ReserverSalles(Employee _employee, Periode _periode, List<EnumEquipement> _equipements, int _capacite)
+        {
+            List<SalleDeReunion> salles = new List<SalleDeReunion>();
+            if (Salles.Count > 0 && Employees.Count > 0)
+            {
+                foreach (SalleDeReunion salle in Salles)
+                {
+                    if (salle.VerifierEquipement(_equipements) &&
+                        salle.VerifierDisponibilité(_periode) == EnumDisponibilite.Disponible &&
+                        salle.VerifierCapacite(_capacite))
+                    {
+                        salles.Add(salle);
+                    }
+                }
+            }
+            return salles;
+        }
         /// <summary>
         /// Permet l'annulation d'une <see cref="Reservation"/> de <seealso cref="SalleDeReunion"/> en se basant sur une <seealso cref="SalleDeReunion"/> et une <seealso cref="Periode"/>
         /// </summary>
@@ -165,5 +182,9 @@ namespace SalleDeReunionExample
             return result;
         }
 
+        public Employee? RecupererEmployer(string _matricule)
+        {
+            return Employees.Find(e=>e.Matricule==_matricule);
+        }
     }
 }

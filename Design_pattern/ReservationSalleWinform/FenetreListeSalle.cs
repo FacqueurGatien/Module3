@@ -11,15 +11,11 @@ using System.Windows.Forms;
 
 namespace ReservationSalleWinform
 {
-    public partial class FormulaireReservationUC : UserControl
+    public partial class FenetreListeSalle : UserControl
     {
-        public List<Employee> employees { get; set; }
-        public List<SalleDeReunion> salleDeReunions { get; set; }
-        public IMediateur mediateur { get; set; }
-        public FormulaireReservationUC()
+        public FenetreListeSalle()
         {
             InitializeComponent();
         }
-        public UserControl UserControl() => this;
     }
 }

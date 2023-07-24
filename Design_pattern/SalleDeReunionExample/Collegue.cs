@@ -42,5 +42,7 @@ namespace SalleDeReunionExample
         /// <returns>Un <see cref="string"/> formaté</returns>
         public abstract string ToStringCollegue();
 
+        public abstract string Reference();
+
     }
 }

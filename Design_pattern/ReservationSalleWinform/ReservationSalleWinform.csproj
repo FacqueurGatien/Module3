@@ -12,4 +12,10 @@
     <ProjectReference Include="..\SalleDeReunionExample\SalleDeReunionExample.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="FenetreListeSalle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>

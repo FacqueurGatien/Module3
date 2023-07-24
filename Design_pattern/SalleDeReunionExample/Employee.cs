@@ -14,7 +14,7 @@ namespace SalleDeReunionExample
         /// <summary>
         /// Une chaine de caractere qui permet d'identifier un <see cref="Employee"/> de facon Unique
         /// </summary>
-        private string Matricule { get; }
+        public string Matricule { get; }
         /// <summary>
         /// Prenom d'un <see cref="Employee"/>
         /// </summary>
@@ -31,7 +31,7 @@ namespace SalleDeReunionExample
             :base(_mediateur,_nom)
         {
             Matricule = _matricule;
-            Prenom = _nom;
+            Prenom = _prenom;
         }
 
         /// <summary>
@@ -54,6 +54,6 @@ namespace SalleDeReunionExample
         /// <returns>Un <see cref="string"/> formaté</returns>
         public override string ToStringCollegue()=> string.Format("Employée\n    Matricule : {0}\n    Nom : {1}\n    Prenom : {2}\n", Matricule, Nom, Prenom);
 
-
+        public override string Reference() => $"{Matricule} : {Nom} - {Prenom}";
     }
 }

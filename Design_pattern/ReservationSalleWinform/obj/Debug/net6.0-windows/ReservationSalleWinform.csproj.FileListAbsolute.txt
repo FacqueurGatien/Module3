@@ -22,3 +22,10 @@ C:\Users\gafacqueur\Documents\Module3\Design_pattern\ReservationSalleWinform\obj
 C:\Users\gafacqueur\Documents\Module3\Design_pattern\ReservationSalleWinform\obj\Debug\net6.0-windows\ReservationSalleWinform.pdb
 C:\Users\gafacqueur\Documents\Module3\Design_pattern\ReservationSalleWinform\obj\Debug\net6.0-windows\ReservationSalleWinform.genruntimeconfig.cache
 C:\Users\gafacqueur\Documents\Module3\Design_pattern\ReservationSalleWinform\obj\Debug\net6.0-windows\ref\ReservationSalleWinform.dll
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\ReservationSalleWinform\obj\Debug\net6.0-windows\ReservationSalleWinform.CheckBoxUC.resources
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\ReservationSalleWinform\obj\Debug\net6.0-windows\ReservationSalleWinform.DatePickerUC.resources
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\ReservationSalleWinform\obj\Debug\net6.0-windows\ReservationSalleWinform.FormulaireReservationUC.resources
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\ReservationSalleWinform\obj\Debug\net6.0-windows\ReservationSalleWinform.NumericUpDownUC.resources
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\ReservationSalleWinform\obj\Debug\net6.0-windows\ReservationSalleWinform.TextBoxUC.resources
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\ReservationSalleWinform\obj\Debug\net6.0-windows\ReservationSalleWinform.FenetreListeEmployee.resources
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\ReservationSalleWinform\obj\Debug\net6.0-windows\ReservationSalleWinform.FenetreListeSalle.resources
