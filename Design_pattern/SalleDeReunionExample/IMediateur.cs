@@ -8,6 +8,7 @@ namespace SalleDeReunionExample
 {
     public interface IMediateur
     {
+        //Fonction minimum requise pour l'interface
         public bool ReserverSalle(Employee _employee, Periode _periode, List<EnumEquipement> _equipements, int _capacite);
         public bool ReserverSalle(Employee _employee, string _salle, Periode _periode, List<EnumEquipement> _equipements, int _capacite);
         public void AnnulerReservation(SalleDeReunion _salle,Periode _periode);

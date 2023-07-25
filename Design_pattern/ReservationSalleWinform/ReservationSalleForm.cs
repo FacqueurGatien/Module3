@@ -139,7 +139,7 @@ namespace ReservationSalleWinform
         /// </summary>
         private void RemplirListeSalleDispo(Employee _employee, Periode _periode, List<EnumEquipement> _equipements, int _capacite)
         {
-            List<SalleDeReunion> salleList = ((Mediateur)mediateur).ReserverSalles(_employee, _periode, _equipements, _capacite);
+            List<SalleDeReunion> salleList = ((Mediateur)mediateur).RecupererSallesDispo(_employee, _periode, _equipements, _capacite);
             CBsalleDispo.Items.Clear();
             salleList.ForEach(s => CBsalleDispo.Items.Add(s.Reference()));
         }

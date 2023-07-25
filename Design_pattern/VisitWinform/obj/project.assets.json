@@ -61,23 +61,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\izaya\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\gafacqueur\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SoraDev\\Module3\\Design_pattern\\VisitWinform\\VisitWinform.csproj",
+      "projectUniqueName": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\VisitWinform\\VisitWinform.csproj",
       "projectName": "VisitWinform",
-      "projectPath": "D:\\SoraDev\\Module3\\Design_pattern\\VisitWinform\\VisitWinform.csproj",
-      "packagesPath": "C:\\Users\\izaya\\.nuget\\packages\\",
-      "outputPath": "D:\\SoraDev\\Module3\\Design_pattern\\VisitWinform\\obj\\",
+      "projectPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\VisitWinform\\VisitWinform.csproj",
+      "packagesPath": "C:\\Users\\gafacqueur\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\VisitWinform\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\izaya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gafacqueur\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -92,8 +94,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "D:\\SoraDev\\Module3\\Design_pattern\\DesignPattern\\DesignPattern.csproj": {
-              "projectPath": "D:\\SoraDev\\Module3\\Design_pattern\\DesignPattern\\DesignPattern.csproj"
+            "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\DesignPattern\\DesignPattern.csproj": {
+              "projectPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\DesignPattern\\DesignPattern.csproj"
             }
           }
         }

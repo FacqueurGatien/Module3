@@ -42,7 +42,6 @@ namespace SalleDeReunionExample
         /// <param name="_capacite">Capacité d'acceuille necessaire de la <see cref="SalleDeReunion"/></param>
         public bool ReserverSalle(Periode _periode, List<EnumEquipement> _equipements, int _capacite) => Mediateur.ReserverSalle(this, _periode, _equipements, _capacite);
         public bool ReserverSalle(Periode _periode,string _salle, List<EnumEquipement> _equipements, int _capacite) => Mediateur.ReserverSalle(this,_salle, _periode, _equipements, _capacite);
-
         /// <summary>
         /// Permet de demander aux <see cref="IMediateur"/> d'annuler une <seealso cref="Reservation"/> en se basant sur un <seealso cref="Employee"/> et une <seealso cref="Periode"/>
         /// </summary>
@@ -54,7 +53,6 @@ namespace SalleDeReunionExample
         /// </summary>
         /// <returns>Un <see cref="string"/> formaté</returns>
         public override string ToStringCollegue()=> string.Format("Employée\n    Matricule : {0}\n    Nom : {1}\n    Prenom : {2}\n", Matricule, Nom, Prenom);
-
         public override string Reference() => $"{Matricule} : {Nom} - {Prenom}";
     }
 }
