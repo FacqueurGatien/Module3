@@ -213,6 +213,10 @@ namespace SalleDeReunionExample
         {
             return Employees.Find(e => e.Matricule == _matricule);
         }
+        public SalleDeReunion? RecupererSalleDeReunion(string _salleRef)
+        {
+            return Salles.Find(s => s.Reference() == _salleRef);
+        }
         public List<Periode> RecupererPeriodesEmployee(string _employee)
         {
             Employee? emp = Employees.Find(e=>e.Reference()==_employee);
@@ -256,6 +260,18 @@ namespace SalleDeReunionExample
                 reservation.ForEach(r => employees.Add(r.Employee));
             }
             return employees;
+        }
+
+        public void AnnulerReservation(Reservation _reservation)
+        {
+            Reservation? reservation=Reservations.Find(r => r.Employee.Reference() == _reservation.Employee.Reference() && 
+                r.Salle.Reference() == _reservation.Salle.Reference() && 
+                r.Periode.Reference()==_reservation.Periode.Reference());
+
+            if (reservation!=null)
+            {
+                Reservations.Remove(reservation);
+            }
         }
     }
 }

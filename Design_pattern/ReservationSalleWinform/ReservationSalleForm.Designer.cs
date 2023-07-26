@@ -65,6 +65,8 @@ namespace ReservationSalleWinform
             labelEquipements = new Label();
             CBEmployeeSalle = new ComboBox();
             CBSalleEmployee = new ComboBox();
+            BannulerEmployeeSalle = new Button();
+            BannulerSalleEmployee = new Button();
             ((System.ComponentModel.ISupportInitialize)NUDcapacite).BeginInit();
             ((System.ComponentModel.ISupportInitialize)NUDheureDebut).BeginInit();
             ((System.ComponentModel.ISupportInitialize)NUDminuteDebut).BeginInit();
@@ -291,7 +293,7 @@ namespace ReservationSalleWinform
             // labelEployeesListe
             // 
             labelEployeesListe.AutoSize = true;
-            labelEployeesListe.Location = new Point(514, 9);
+            labelEployeesListe.Location = new Point(585, 9);
             labelEployeesListe.Name = "labelEployeesListe";
             labelEployeesListe.Size = new Size(64, 15);
             labelEployeesListe.TabIndex = 23;
@@ -301,7 +303,7 @@ namespace ReservationSalleWinform
             // 
             CBEmployeesListe.DropDownStyle = ComboBoxStyle.DropDownList;
             CBEmployeesListe.FormattingEnabled = true;
-            CBEmployeesListe.Location = new Point(471, 27);
+            CBEmployeesListe.Location = new Point(542, 27);
             CBEmployeesListe.Name = "CBEmployeesListe";
             CBEmployeesListe.Size = new Size(249, 23);
             CBEmployeesListe.TabIndex = 24;
@@ -310,7 +312,7 @@ namespace ReservationSalleWinform
             // labelPeriodeEmployee
             // 
             labelPeriodeEmployee.AutoSize = true;
-            labelPeriodeEmployee.Location = new Point(514, 61);
+            labelPeriodeEmployee.Location = new Point(585, 61);
             labelPeriodeEmployee.Name = "labelPeriodeEmployee";
             labelPeriodeEmployee.Size = new Size(47, 15);
             labelPeriodeEmployee.TabIndex = 25;
@@ -320,16 +322,16 @@ namespace ReservationSalleWinform
             // 
             PeriodeEmployee.DropDownStyle = ComboBoxStyle.DropDownList;
             PeriodeEmployee.FormattingEnabled = true;
-            PeriodeEmployee.Location = new Point(471, 79);
+            PeriodeEmployee.Location = new Point(542, 79);
             PeriodeEmployee.Name = "PeriodeEmployee";
             PeriodeEmployee.Size = new Size(247, 23);
             PeriodeEmployee.TabIndex = 26;
-            PeriodeEmployee.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            PeriodeEmployee.SelectedIndexChanged += PeriodeEmployee_SelectedIndexChanged;
             // 
             // labelSalleReserve
             // 
             labelSalleReserve.AutoSize = true;
-            labelSalleReserve.Location = new Point(514, 117);
+            labelSalleReserve.Location = new Point(585, 117);
             labelSalleReserve.Name = "labelSalleReserve";
             labelSalleReserve.Size = new Size(74, 15);
             labelSalleReserve.TabIndex = 27;
@@ -338,7 +340,7 @@ namespace ReservationSalleWinform
             // labelSalles
             // 
             labelSalles.AutoSize = true;
-            labelSalles.Location = new Point(514, 182);
+            labelSalles.Location = new Point(585, 182);
             labelSalles.Name = "labelSalles";
             labelSalles.Size = new Size(96, 15);
             labelSalles.TabIndex = 29;
@@ -348,7 +350,7 @@ namespace ReservationSalleWinform
             // 
             CBsalleListe.DropDownStyle = ComboBoxStyle.DropDownList;
             CBsalleListe.FormattingEnabled = true;
-            CBsalleListe.Location = new Point(471, 198);
+            CBsalleListe.Location = new Point(542, 198);
             CBsalleListe.Name = "CBsalleListe";
             CBsalleListe.Size = new Size(247, 23);
             CBsalleListe.TabIndex = 30;
@@ -357,7 +359,7 @@ namespace ReservationSalleWinform
             // labelPeriodeSalle
             // 
             labelPeriodeSalle.AutoSize = true;
-            labelPeriodeSalle.Location = new Point(514, 241);
+            labelPeriodeSalle.Location = new Point(585, 241);
             labelPeriodeSalle.Name = "labelPeriodeSalle";
             labelPeriodeSalle.Size = new Size(47, 15);
             labelPeriodeSalle.TabIndex = 31;
@@ -367,16 +369,16 @@ namespace ReservationSalleWinform
             // 
             PeriodeSalle.DropDownStyle = ComboBoxStyle.DropDownList;
             PeriodeSalle.FormattingEnabled = true;
-            PeriodeSalle.Location = new Point(471, 258);
+            PeriodeSalle.Location = new Point(542, 258);
             PeriodeSalle.Name = "PeriodeSalle";
             PeriodeSalle.Size = new Size(247, 23);
             PeriodeSalle.TabIndex = 32;
-            PeriodeSalle.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
+            PeriodeSalle.SelectedIndexChanged += PeriodeSalle_SelectedIndexChanged;
             // 
             // labelEmployeeConcerné
             // 
             labelEmployeeConcerné.AutoSize = true;
-            labelEmployeeConcerné.Location = new Point(514, 303);
+            labelEmployeeConcerné.Location = new Point(585, 303);
             labelEmployeeConcerné.Name = "labelEmployeeConcerné";
             labelEmployeeConcerné.Size = new Size(110, 15);
             labelEmployeeConcerné.TabIndex = 33;
@@ -395,25 +397,51 @@ namespace ReservationSalleWinform
             // 
             CBEmployeeSalle.DropDownStyle = ComboBoxStyle.DropDownList;
             CBEmployeeSalle.FormattingEnabled = true;
-            CBEmployeeSalle.Location = new Point(471, 138);
+            CBEmployeeSalle.Location = new Point(542, 138);
             CBEmployeeSalle.Name = "CBEmployeeSalle";
             CBEmployeeSalle.Size = new Size(247, 23);
             CBEmployeeSalle.TabIndex = 36;
+            CBEmployeeSalle.SelectedIndexChanged += CBEmployeeSalle_SelectedIndexChanged;
             // 
             // CBSalleEmployee
             // 
             CBSalleEmployee.DropDownStyle = ComboBoxStyle.DropDownList;
             CBSalleEmployee.FormattingEnabled = true;
-            CBSalleEmployee.Location = new Point(471, 323);
+            CBSalleEmployee.Location = new Point(542, 323);
             CBSalleEmployee.Name = "CBSalleEmployee";
             CBSalleEmployee.Size = new Size(247, 23);
             CBSalleEmployee.TabIndex = 37;
+            CBSalleEmployee.SelectedIndexChanged += CBSalleEmployee_SelectedIndexChanged;
+            // 
+            // BannulerEmployeeSalle
+            // 
+            BannulerEmployeeSalle.Enabled = false;
+            BannulerEmployeeSalle.Location = new Point(797, 27);
+            BannulerEmployeeSalle.Name = "BannulerEmployeeSalle";
+            BannulerEmployeeSalle.Size = new Size(91, 134);
+            BannulerEmployeeSalle.TabIndex = 38;
+            BannulerEmployeeSalle.Text = "Annuler";
+            BannulerEmployeeSalle.UseVisualStyleBackColor = true;
+            BannulerEmployeeSalle.Click += BannulerEmployeeSalle_Click;
+            // 
+            // BannulerSalleEmployee
+            // 
+            BannulerSalleEmployee.Enabled = false;
+            BannulerSalleEmployee.Location = new Point(797, 198);
+            BannulerSalleEmployee.Name = "BannulerSalleEmployee";
+            BannulerSalleEmployee.Size = new Size(91, 147);
+            BannulerSalleEmployee.TabIndex = 39;
+            BannulerSalleEmployee.Text = "Annuler";
+            BannulerSalleEmployee.UseVisualStyleBackColor = true;
+            BannulerSalleEmployee.Click += BannulerSalleEmployee_Click;
             // 
             // ReservationSalleForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(732, 368);
+            ClientSize = new Size(910, 368);
+            Controls.Add(BannulerSalleEmployee);
+            Controls.Add(BannulerEmployeeSalle);
             Controls.Add(CBSalleEmployee);
             Controls.Add(CBEmployeeSalle);
             Controls.Add(labelEquipements);
@@ -501,5 +529,7 @@ namespace ReservationSalleWinform
         private Label labelEquipements;
         private ComboBox CBEmployeeSalle;
         private ComboBox CBSalleEmployee;
+        private Button BannulerEmployeeSalle;
+        private Button BannulerSalleEmployee;
     }
 }

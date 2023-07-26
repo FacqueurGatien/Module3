@@ -89,13 +89,13 @@ namespace ReservationSalleWinform
                 employeSelectionne.ReserverSalle(periodeSelectionne, CBsalleDispo.SelectedItem.ToString(), equipementSelectionne, (int)NUDcapacite.Value);
                 CBsalleDispo.Items.Clear();
                 Bvalider.Enabled = false;
+                ResetSelection();
                 UpdateIHM();
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-
         }
 
         /// <summary>
@@ -137,6 +137,10 @@ namespace ReservationSalleWinform
         /// <summary>
         /// Remplit la liste des salles disponibles pour la réservation.
         /// </summary>
+        /// <param name="_employee">Instance d'un <see cref="Employee"/></param>
+        /// <param name="_periode">Instace d'une <see cref="Periode"/></param>
+        /// <param name="_equipements"><see cref="List{T}"/> d'equipement souhaité</param>
+        /// <param name="_capacite">Capacité de personne max souhaité</param>
         private void RemplirListeSalleDispo(Employee _employee, Periode _periode, List<EnumEquipement> _equipements, int _capacite)
         {
             List<SalleDeReunion> salleList = ((Mediateur)mediateur).RecupererSallesDispo(_employee, _periode, _equipements, _capacite);
@@ -183,8 +187,6 @@ namespace ReservationSalleWinform
         /// <summary>
         /// Met a jour la liste d'equipement selectionnée
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void CBXequipement1_CheckedChanged(object sender, EventArgs e)
         {
             equipementSelectionne.Clear();
@@ -198,101 +200,161 @@ namespace ReservationSalleWinform
             UpdateIHM();
         }
 
+
+        /// <summary>
+        /// Permet de mettre a jour la <see cref="ComboBox"/> des <seealso cref="Periode"/> correspondant à un <seealso cref="Employee"/> seléctionné
+        /// </summary>
         private void CBEmployeesListe_SelectedIndexChanged(object sender, EventArgs e)
         {
             PeriodeEmployee.Items.Clear();
             CBEmployeeSalle.Items.Clear();
-            List<Periode> periodes = ((Mediateur)mediateur).RecupererPeriodesEmployee(((ComboBox)sender).SelectedItem.ToString());
-            if (periodes.Count > 0)
+            if (CBEmployeesListe.SelectedItem != null)
             {
-                periodes.ForEach(p =>
+                List<Periode> periodes = ((Mediateur)mediateur).RecupererPeriodesEmployee(((ComboBox)sender).SelectedItem.ToString());
+                if (periodes.Count > 0)
                 {
-                    if (!PeriodeEmployee.Items.Contains(p.Reference()))
+                    periodes.ForEach(p =>
                     {
-                        PeriodeEmployee.Items.Add(p.Reference());
-                    }
-                });
+                        if (!PeriodeEmployee.Items.Contains(p.Reference()))
+                        {
+                            PeriodeEmployee.Items.Add(p.Reference());
+                        }
+                    });
+                }
             }
-        }
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CBEmployeeSalle.Items.Clear();
-            List<SalleDeReunion> salles = ((Mediateur)mediateur).RecupererSalle(CBEmployeesListe.SelectedItem.ToString(), PeriodeEmployee.SelectedItem.ToString());
-            if (salles.Count > 0)
+            else
             {
                 CBEmployeeSalle.Items.Clear();
-                salles.ForEach(s => CBEmployeeSalle.Items.Add(s.Reference()));
+                PeriodeEmployee.Items.Clear();
+            }
+        }
+        /// <summary>
+        /// Permet de mettre a jour la <see cref="ComboBox"/> des <seealso cref="SalleDeReunion"/> correspondant à un <seealso cref="Employee"/> et une <seealso cref="Periode"/> seléctionné
+        /// </summary>
+        private void PeriodeEmployee_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CBEmployeeSalle.Items.Clear();
+            if (PeriodeEmployee.SelectedItem != null)
+            {
+                List<SalleDeReunion> salles = ((Mediateur)mediateur).RecupererSalle(CBEmployeesListe.SelectedItem.ToString(), PeriodeEmployee.SelectedItem.ToString());
+                if (salles.Count > 0)
+                {
+                    CBEmployeeSalle.Items.Clear();
+                    salles.ForEach(s => CBEmployeeSalle.Items.Add(s.Reference()));
+                }
+            }
+            else
+            {
+                CBEmployeeSalle.Items.Clear();
+            }
+        }
+        private void CBEmployeeSalle_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CBEmployeeSalle.SelectedItem != null)
+            {
+                BannulerEmployeeSalle.Enabled = true;
+            }
+            else
+            {
+                BannulerEmployeeSalle.Enabled = false;
+            }
+        }
+        private void BannulerEmployeeSalle_Click(object sender, EventArgs e)
+        {
+            SalleDeReunion? salle = ((Mediateur)mediateur).RecupererSalleDeReunion(CBEmployeeSalle.SelectedItem.ToString());
+            Employee? employee = ((Mediateur)mediateur).RecupererEmployer(CBEmployeesListe.SelectedItem.ToString().Split(':')[0].Trim(' '));
+            List<Periode>? periodes = ((Mediateur)mediateur).RecupererPeriodesEmployee(employee.Reference().ToString());
+            Periode? periode = periodes.Find(p=>p.Reference()==PeriodeEmployee.SelectedItem.ToString());
+            if (salle !=null && employee!=null && periode!=null)
+            {
+                ((Mediateur)mediateur).AnnulerReservation(new Reservation(salle, employee,periode));
+                ResetSelection();
+                DTperiodeDebut.Value = (DTperiodeFin.Value).AddDays(1);
             }
         }
 
+        /// <summary>
+        /// Permet de mettre a jour la <see cref="ComboBox"/> des <seealso cref="Periode"/> correspondant à une <seealso cref="SalleDeReunion"/> seléctionné
+        /// </summary>
         private void CBsalleListe_SelectedIndexChanged(object sender, EventArgs e)
         {
             PeriodeSalle.Items.Clear();
             CBSalleEmployee.Items.Clear();
-            List<Periode> periodes = ((Mediateur)mediateur).RecupererPeriodesSalle(((ComboBox)sender).SelectedItem.ToString());
-            if (periodes.Count > 0)
+            if (CBsalleListe.SelectedItem != null)
             {
-                periodes.ForEach(p =>
+                List<Periode> periodes = ((Mediateur)mediateur).RecupererPeriodesSalle(((ComboBox)sender).SelectedItem.ToString());
+                if (periodes.Count > 0)
                 {
-                    if (!PeriodeSalle.Items.Contains(p.Reference()))
+                    periodes.ForEach(p =>
                     {
-                        PeriodeSalle.Items.Add(p.Reference());
-                    }
-                });
+                        if (!PeriodeSalle.Items.Contains(p.Reference()))
+                        {
+                            PeriodeSalle.Items.Add(p.Reference());
+                        }
+                    });
+                }
+            }
+            else
+            {
+                CBEmployeeSalle.Items.Clear();
+                PeriodeSalle.Items.Clear();
             }
         }
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        /// <summary>
+        /// Permet de mettre a jour la <see cref="ComboBox"/> des <seealso cref="Employee"/> correspondant à une <seealso cref="SalleDeReunion"/> et une <seealso cref="Periode"/> seléctionné
+        /// </summary>
+        private void PeriodeSalle_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             CBSalleEmployee.Items.Clear();
-            List<Employee> emp = ((Mediateur)mediateur).RecupererEmployee(CBsalleListe.SelectedItem.ToString(), PeriodeSalle.SelectedItem.ToString());
-            if (emp.Count > 0)
+            if (PeriodeSalle.SelectedItem != null)
+            {
+                List<Employee> emp = ((Mediateur)mediateur).RecupererEmployee(CBsalleListe.SelectedItem.ToString(), PeriodeSalle.SelectedItem.ToString());
+                if (emp.Count > 0)
+                {
+                    CBSalleEmployee.Items.Clear();
+                    emp.ForEach(s => CBSalleEmployee.Items.Add(s.Reference()));
+                }
+            }
+            else
             {
                 CBSalleEmployee.Items.Clear();
-                emp.ForEach(s => CBSalleEmployee.Items.Add(s.Reference()));
+            }
+
+        }
+        private void CBSalleEmployee_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CBEmployeeSalle.SelectedItem != null)
+            {
+                BannulerSalleEmployee.Enabled = true;
+            }
+            else
+            {
+                BannulerSalleEmployee.Enabled = false;
             }
         }
-        /*        /// <summary>
-/// Verifie si les dates sont valides dans l'IHM 
-/// </summary>
-private bool VerifierDate()
-{
-if (DTperiodeDebut.Value != null && DTperiodeFin.Value != null && DTperiodeDebut.Value<=DateTime.Now)
-{
-if (DTperiodeDebut.Value < DTperiodeFin.Value)
-{
-return true;
-}
-else if (DTperiodeDebut.Value.Year == DTperiodeFin.Value.Year &&
-DTperiodeDebut.Value.Month == DTperiodeFin.Value.Month &&
-DTperiodeDebut.Value.Day == DTperiodeFin.Value.Day)
-{
-if (NUDheureDebut.Value < NUDheureFin.Value)
-{
-return true;
-}
-else if (NUDheureDebut.Value == NUDheureFin.Value)
-{
-if (NUDminuteDebut.Value < NUDminuteFin.Value)
-{
-return true;
-}
-else
-{
-return false;
-}
-}
-else
-{
-return false;
-}
-}
-else
-{
-return false;
-}
-}
-return false;
-}*/
+        private void BannulerSalleEmployee_Click(object sender, EventArgs e)
+        {
+            SalleDeReunion? salle = ((Mediateur)mediateur).RecupererSalleDeReunion(CBsalleListe.SelectedItem.ToString());
+            Employee? employee = ((Mediateur)mediateur).RecupererEmployer(CBSalleEmployee.SelectedItem.ToString().Split(':')[0].Trim(' '));
+            List<Periode>? periodes = ((Mediateur)mediateur).RecupererPeriodesSalle(salle.Reference().ToString());
+            Periode? periode = periodes.Find(p => p.Reference() == PeriodeSalle.SelectedItem.ToString());
+            if (salle != null && employee != null && periode != null)
+            {
+                ((Mediateur)mediateur).AnnulerReservation(new Reservation(salle, employee, periode));
+                ResetSelection();
+                DTperiodeDebut.Value = (DTperiodeFin.Value).AddDays(1);
+            }
+        }
+        private void ResetSelection()
+        {
+            CBsalleListe.SelectedItem = null;
+            CBEmployeesListe.SelectedItem = null;
+            CBSalleEmployee.SelectedItem = null;
+            CBEmployeeSalle.SelectedItem = null;
+            PeriodeSalle.SelectedItem = null;
+            PeriodeEmployee.SelectedItem = null;
+            BannulerEmployeeSalle.Enabled = false;
+            BannulerSalleEmployee.Enabled = false;
+        }
     }
 }

@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\PatternCompositeExample\\PatternCompositeExample.csproj": {}
+    "E:\\SoraDev\\Module3\\Design_pattern\\PatternCompositeExample\\PatternCompositeExample.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\PatternCompositeExample\\PatternCompositeExample.csproj": {
+    "E:\\SoraDev\\Module3\\Design_pattern\\PatternCompositeExample\\PatternCompositeExample.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\PatternCompositeExample\\PatternCompositeExample.csproj",
+        "projectUniqueName": "E:\\SoraDev\\Module3\\Design_pattern\\PatternCompositeExample\\PatternCompositeExample.csproj",
         "projectName": "PatternCompositeExample",
-        "projectPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\PatternCompositeExample\\PatternCompositeExample.csproj",
-        "packagesPath": "C:\\Users\\gafacqueur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\PatternCompositeExample\\obj\\",
+        "projectPath": "E:\\SoraDev\\Module3\\Design_pattern\\PatternCompositeExample\\PatternCompositeExample.csproj",
+        "packagesPath": "C:\\Users\\izaya\\.nuget\\packages\\",
+        "outputPath": "E:\\SoraDev\\Module3\\Design_pattern\\PatternCompositeExample\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\gafacqueur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\izaya\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
