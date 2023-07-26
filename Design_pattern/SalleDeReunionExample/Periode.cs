@@ -40,6 +40,10 @@ namespace SalleDeReunionExample
         /// </summary>
         /// <returns>Un <see cref="string"/> formaté</returns>
         public string ToStringPeriode()=> string.Format("{0}\n{1}\n", DateDebut.ToString(), DateFin.ToString());
+        /// <summary>
+        /// Permet de renvoyer un moyen d'identification de la <see cref="Periode"/>
+        /// </summary>
+        /// <returns>Un <see cref="string"/></returns>
         public string Reference() => string.Format("{0} - {1}", DateDebut.ToString(), DateFin.ToString());
 
     }

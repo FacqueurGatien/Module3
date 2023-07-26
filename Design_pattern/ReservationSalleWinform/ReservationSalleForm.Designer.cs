@@ -109,7 +109,7 @@ namespace ReservationSalleWinform
             NUDcapacite.Name = "NUDcapacite";
             NUDcapacite.Size = new Size(94, 23);
             NUDcapacite.TabIndex = 3;
-            NUDcapacite.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            NUDcapacite.Value = new decimal(new int[] { 10, 0, 0, 0 });
             NUDcapacite.ValueChanged += ValueChange;
             // 
             // CBXequipement1
@@ -287,7 +287,7 @@ namespace ReservationSalleWinform
             Bvalider.Size = new Size(94, 23);
             Bvalider.TabIndex = 22;
             Bvalider.Text = "Valider";
-            Bvalider.UseVisualStyleBackColor = true;
+            Bvalider.UseVisualStyleBackColor = false;
             Bvalider.Click += Bvalider_Click;
             // 
             // labelEployeesListe

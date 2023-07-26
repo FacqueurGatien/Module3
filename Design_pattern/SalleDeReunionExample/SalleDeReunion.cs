@@ -88,6 +88,10 @@ namespace SalleDeReunionExample
         /// </summary>
         /// <returns>Un <see cref="string"/> formaté</returns>
         public override string ToStringCollegue() => string.Format("Salle de reunion\n    Nom : {0}\n    Capacite : {1} personnes\n    Liste d'équipements : \n{2}\n", Nom, Capacite, ToStringEquipement());
+        /// <summary>
+        /// Permet de renvoyer un moyen d'identification d'une <see cref="SalleDeReunion"/>
+        /// </summary>
+        /// <returns>Un <see cref="string"/></returns>
         public override string Reference()=> $"Salle {Nom}";
     }
 }

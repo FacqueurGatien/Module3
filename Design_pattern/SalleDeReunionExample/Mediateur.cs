@@ -39,20 +39,24 @@ namespace SalleDeReunionExample
         /// <param name="_periode"><see cref="Periode"/> de date(<see cref="DateTime"/>) de la <seealso cref="Reservation"/></param>
         /// <param name="_equipements">Liste d'equipement que la <see cref="SalleDeReunion"/> doit disposer</param>
         /// <param name="_capacite">Capacité d'acceuille necessaire de la <see cref="SalleDeReunion"/></param>
+        /// <param name="_uniqueReservation">Un <see cref="bool"/> qui specifie si la <seealso cref="Reservation"/> de plusieurs <seealso cref="SalleDeReunion"/> est possible pour un meme <seealso cref="Employee"/> a une meme <seealso cref="Periode"/></param> (par defaut sur true)
         /// <returns>Un <see cref="bool"/> (true ou false)</returns>
-        public bool ReserverSalle(Employee _employee, Periode _periode, List<EnumEquipement> _equipements, int _capacite)
+        public bool ReserverSalle(Employee _employee, Periode _periode, List<EnumEquipement> _equipements, int _capacite, bool _uniqueReservation = true)
         {
             if (Salles.Count > 0 && Employees.Count > 0)
             {
-                foreach (SalleDeReunion salle in Salles)
+                Reservation? reservation = Reservations.Find(r => r.Employee.Reference() == _employee.Reference() && r.Periode.Reference() == _periode.Reference());
+                if ((_uniqueReservation && reservation == null) || !_uniqueReservation)
                 {
-                    if (salle.VerifierEquipement(_equipements) &&
-                        salle.VerifierDisponibilité(_periode) == EnumDisponibilite.Disponible &&
-                        salle.VerifierCapacite(_capacite))
+                    foreach (SalleDeReunion salle in Salles)
                     {
-                        Reservation reservation = new Reservation(salle, _employee, _periode);
-                        AjouterReservation(reservation);
-                        return true;
+                        if (salle.VerifierEquipement(_equipements) &&
+                            salle.VerifierDisponibilité(_periode) == EnumDisponibilite.Disponible &&
+                            salle.VerifierCapacite(_capacite))
+                        {
+                            AjouterReservation(new Reservation(salle, _employee, _periode));
+                            return true;
+                        }
                     }
                 }
             }
@@ -66,14 +70,15 @@ namespace SalleDeReunionExample
         /// <param name="_periode"><see cref="Periode"/> de date(<see cref="DateTime"/>) de la <seealso cref="Reservation"/></param>
         /// <param name="_equipements">Liste d'equipement que la <see cref="SalleDeReunion"/> doit disposer</param>
         /// <param name="_capacite">Capacité d'acceuille necessaire de la <see cref="SalleDeReunion"/></param>
+        /// <param name="_uniqueReservation">Un <see cref="bool"/> qui specifie si la <seealso cref="Reservation"/> de plusieurs <seealso cref="SalleDeReunion"/> est possible pour un meme <seealso cref="Employee"/> a une meme <seealso cref="Periode"/></param> (par defaut sur true)
         /// <returns>Un <see cref="bool"/> (true ou false)</returns>
-        public bool ReserverSalle(Employee _employee, string _salle, Periode _periode, List<EnumEquipement> _equipements, int _capacite)
+        public bool ReserverSalle(Employee _employee, string _salle, Periode _periode, List<EnumEquipement> _equipements, int _capacite, bool _UniqueReservation=true)
         {
             SalleDeReunion salle = Salles.Find(s => s.Reference() == _salle);
             if (salle != null)
             {
                 Reservation? reservation =Reservations.Find(r => r.Employee.Reference() == _employee.Reference() && r.Periode.Reference() == _periode.Reference());
-                if (reservation==null && Salles.Count > 0 && Employees.Count > 0)
+                if ((reservation==null || (!_UniqueReservation && reservation != null)) && Salles.Count > 0 && Employees.Count > 0)
                 {
                     if (salle.VerifierEquipement(_equipements) &&
                         salle.VerifierDisponibilité(_periode) == EnumDisponibilite.Disponible &&
@@ -86,7 +91,6 @@ namespace SalleDeReunionExample
                 return false;
             }
             return false;
-
         }
         /// <summary>
         /// Permet l'annulation d'une <see cref="Reservation"/> de <seealso cref="SalleDeReunion"/> en se basant sur une <seealso cref="SalleDeReunion"/> et une <seealso cref="Periode"/>
@@ -135,7 +139,6 @@ namespace SalleDeReunionExample
         /// <param name="_salle">Une instance de <see cref="SalleDeReunion"/></param>
         /// <param name="_periode">Une <see cref="Periode"/></param>
         /// <returns></returns>     
-        
         public EnumDisponibilite VerifierDisponibilite(SalleDeReunion _salle, Periode _periode)
         {
             foreach (Reservation reservation in Reservations)
@@ -162,7 +165,7 @@ namespace SalleDeReunionExample
         /// <param name="_reservation"></param>
         private void EnleverReservation(Reservation _reservation) => Reservations.Remove(_reservation);
 
-        //Fonction de recuperation de string pour l'affichage
+        //Pour l'IHM Console
         /// <summary>
         /// Permet de renvoyer textuellement les caracteristiques de toute les <see cref="SalleDeReunion"/>
         /// </summary>
@@ -212,31 +215,32 @@ namespace SalleDeReunionExample
             return result;
         }
 
-        //PourL'IHM
-        public List<SalleDeReunion> RecupererSallesDispo(Employee _employee, Periode _periode, List<EnumEquipement> _equipements, int _capacite)
+        //PourL'IHM Winform
+        public List<SalleDeReunion> RecupererSallesDispo(Employee _employee, Periode _periode, List<EnumEquipement> _equipements, int _capacite, bool _uniqueReservation=true)
         {
             List<SalleDeReunion> salles = new List<SalleDeReunion>();
-            if (Salles.Count > 0 && Employees.Count > 0)
+
+            Reservation? reservation = Reservations.Find(r=>r.Employee.Reference()==_employee.Reference()&&r.Periode.Reference()==_periode.Reference());
+            if (Salles.Count > 0 && Employees.Count > 0 && ((_uniqueReservation && reservation==null) || !_uniqueReservation))
             {
                 foreach (SalleDeReunion salle in Salles)
                 {
-                    if (salle.VerifierEquipement(_equipements) &&
+
+                    if ( !_uniqueReservation || (_uniqueReservation && reservation == null))
+                    {
+                        if (salle.VerifierEquipement(_equipements) &&
                         salle.VerifierDisponibilité(_periode) == EnumDisponibilite.Disponible &&
                         salle.VerifierCapacite(_capacite))
-                    {
-                        salles.Add(salle);
+                        {
+                            if (!_uniqueReservation || (_uniqueReservation && reservation == null))
+                            {
+                                salles.Add(salle);
+                            }
+                        }
                     }
                 }
             }
             return salles;
-        }
-        public Employee? RecupererEmployer(string _matricule)
-        {
-            return Employees.Find(e => e.Matricule == _matricule);
-        }
-        public SalleDeReunion? RecupererSalleDeReunion(string _salleRef)
-        {
-            return Salles.Find(s => s.Reference() == _salleRef);
         }
         public List<Periode> RecupererPeriodesEmployee(string _employee)
         {
@@ -282,5 +286,15 @@ namespace SalleDeReunionExample
             }
             return employees;
         }
+
+        public Employee? RecupererEmployer(string _matricule)
+        {
+            return Employees.Find(e => e.Matricule == _matricule);
+        }
+        public SalleDeReunion? RecupererSalleDeReunion(string _salleRef)
+        {
+            return Salles.Find(s => s.Reference() == _salleRef);
+        }
+
     }
 }
