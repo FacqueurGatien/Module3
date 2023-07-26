@@ -70,18 +70,23 @@ namespace SalleDeReunionExample
         public bool ReserverSalle(Employee _employee, string _salle, Periode _periode, List<EnumEquipement> _equipements, int _capacite)
         {
             SalleDeReunion salle = Salles.Find(s => s.Reference() == _salle);
-            if (Salles.Count > 0 && Employees.Count > 0 && salle != null)
+            if (salle != null)
             {
-                if (salle.VerifierEquipement(_equipements) &&
-                    salle.VerifierDisponibilité(_periode) == EnumDisponibilite.Disponible &&
-                    salle.VerifierCapacite(_capacite))
+                Reservation? reservation =Reservations.Find(r => r.Employee.Reference() == _employee.Reference() && r.Periode.Reference() == _periode.Reference());
+                if (reservation==null && Salles.Count > 0 && Employees.Count > 0)
                 {
-                    Reservation reservation = new Reservation(salle, _employee, _periode);
-                    AjouterReservation(reservation);
-                    return true;
+                    if (salle.VerifierEquipement(_equipements) &&
+                        salle.VerifierDisponibilité(_periode) == EnumDisponibilite.Disponible &&
+                        salle.VerifierCapacite(_capacite))
+                    {
+                        AjouterReservation(new Reservation(salle, _employee, _periode));
+                        return true;
+                    }
                 }
+                return false;
             }
             return false;
+
         }
         /// <summary>
         /// Permet l'annulation d'une <see cref="Reservation"/> de <seealso cref="SalleDeReunion"/> en se basant sur une <seealso cref="SalleDeReunion"/> et une <seealso cref="Periode"/>
@@ -110,11 +115,27 @@ namespace SalleDeReunionExample
             }
         }
         /// <summary>
+        /// Permet l'annulation d'une <see cref="Reservation"/> de <seealso cref="SalleDeReunion"/> en se basant sur une <seealso cref="Reservation"/>
+        /// </summary>
+        /// <param name="_reservation"><see cref="Reservation"/> precise ciblé pour l'annulation</param>
+        public void AnnulerReservation(Reservation _reservation)
+        {
+            Reservation? reservation = Reservations.Find(r => r.Employee.Reference() == _reservation.Employee.Reference() &&
+                r.Salle.Reference() == _reservation.Salle.Reference() &&
+                r.Periode.Reference() == _reservation.Periode.Reference());
+
+            if (reservation != null)
+            {
+                Reservations.Remove(reservation);
+            }
+        }
+        /// <summary>
         /// Permet de verifier la disponibilité d'une <see cref="SalleDeReunion"/> en fonction d'une <seealso cref="Periode"/>
         /// </summary>
         /// <param name="_salle">Une instance de <see cref="SalleDeReunion"/></param>
         /// <param name="_periode">Une <see cref="Periode"/></param>
         /// <returns></returns>     
+        
         public EnumDisponibilite VerifierDisponibilite(SalleDeReunion _salle, Periode _periode)
         {
             foreach (Reservation reservation in Reservations)
@@ -260,18 +281,6 @@ namespace SalleDeReunionExample
                 reservation.ForEach(r => employees.Add(r.Employee));
             }
             return employees;
-        }
-
-        public void AnnulerReservation(Reservation _reservation)
-        {
-            Reservation? reservation=Reservations.Find(r => r.Employee.Reference() == _reservation.Employee.Reference() && 
-                r.Salle.Reference() == _reservation.Salle.Reference() && 
-                r.Periode.Reference()==_reservation.Periode.Reference());
-
-            if (reservation!=null)
-            {
-                Reservations.Remove(reservation);
-            }
         }
     }
 }
