@@ -42,7 +42,7 @@ namespace SalleDeReunionExample
         /// <param name="_capacite">Capacité d'acceuille necessaire de la <see cref="SalleDeReunion"/></param>
         /// <param name="_uniqueReservation">Un <see cref="bool"/> qui specifie si la <seealso cref="Reservation"/> de plusieurs <seealso cref="SalleDeReunion"/> est possible pour un meme <seealso cref="Employee"/> a une meme <seealso cref="Periode"/></param> (par defaut sur true)
         /// <returns>Un <see cref="bool"/> (true ou false)</returns>
-        public bool ReserverSalle(Periode _periode, List<EnumEquipement> _equipements, int _capacite,bool _uniqueReservation=true) => Mediateur.ReserverSalle(this, _periode, _equipements, _capacite, _uniqueReservation);
+        public bool ReserverSalle(Periode _periode, List<EnumEquipement> _equipements, int _capacite,bool _uniqueReservation=true) => Mediateur.ReserverSalle(this.Reference(), _periode, _equipements, _capacite, _uniqueReservation);
         /// <summary>
         /// Permet de demander au <see cref="IMediateur"/> de réaliser la <seealso cref="Reservation"/> d'une <seealso cref="SalleDeReunion"/> Precise en fonction de certain paramettres
         /// </summary>
@@ -52,12 +52,12 @@ namespace SalleDeReunionExample
         /// <param name="_capacite">Capacité d'acceuille necessaire de la <see cref="SalleDeReunion"/></param>
         /// <param name="_uniqueReservation">Un <see cref="bool"/> qui specifie si la <seealso cref="Reservation"/> de plusieurs <seealso cref="SalleDeReunion"/> est possible pour un meme <seealso cref="Employee"/> a une meme <seealso cref="Periode"/></param> (par defaut sur true)
         /// <returns>Un <see cref="bool"/> (true ou false)</returns>
-        public bool ReserverSalle(Periode _periode,string _salle, List<EnumEquipement> _equipements, int _capacite,bool _uniqueReservation=true) => Mediateur.ReserverSalle(this,_salle, _periode, _equipements, _capacite, _uniqueReservation);
+        public bool ReserverSalle(Periode _periode,string _salle, List<EnumEquipement> _equipements, int _capacite,bool _uniqueReservation=true) => Mediateur.ReserverSalle(this.Reference(),_salle, _periode, _equipements, _capacite, _uniqueReservation);
         /// <summary>
         /// Permet de demander aux <see cref="IMediateur"/> d'annuler une <seealso cref="Reservation"/> en se basant sur un <seealso cref="Employee"/> et une <seealso cref="Periode"/>
         /// </summary>
         /// <param name="_periode"><see cref="Periode"/> de date(<see cref="DateTime"/>) de la <seealso cref="Reservation"/> à annuler</param>
-        public override void AnnulerReservation(Periode _periode) => Mediateur.AnnulerReservation(this, _periode);
+        public override void AnnulerReservation(Periode _periode) => Mediateur.AnnulerReservationE(this.Reference(), _periode);
 
         /// <summary>
         /// Permet de renvoyer les caracteristiques de la <see cref="Employee"/>

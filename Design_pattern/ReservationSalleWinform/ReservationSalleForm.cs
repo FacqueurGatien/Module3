@@ -281,7 +281,7 @@ namespace ReservationSalleWinform
             Periode? periode = periodes.Find(p => p.Reference() == PeriodeEmployee.SelectedItem.ToString());
             if (salle != null && employee != null && periode != null)
             {
-                ((Mediateur)mediateur).AnnulerReservation(salle, employee, periode);
+                ((Mediateur)mediateur).AnnulerReservation(employee,salle, periode);
                 ResetSelection();
                 DTperiodeDebut.Value = (DTperiodeFin.Value).AddDays(1);
             }
@@ -361,7 +361,7 @@ namespace ReservationSalleWinform
             Periode? periode = periodes.Find(p => p.Reference() == PeriodeSalle.SelectedItem.ToString());
             if (salle != null && employee != null && periode != null)
             {
-                ((Mediateur)mediateur).AnnulerReservation(salle, employee, periode);
+                ((Mediateur)mediateur).AnnulerReservation(employee,salle, periode);
                 ResetSelection();
                 DTperiodeDebut.Value = (DTperiodeFin.Value).AddDays(1);
             }

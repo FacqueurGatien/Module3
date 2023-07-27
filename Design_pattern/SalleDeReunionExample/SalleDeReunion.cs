@@ -38,13 +38,13 @@ namespace SalleDeReunionExample
         /// Permet de demander aux <see cref="IMediateur"/> d'annuler une <seealso cref="Reservation"/> en se basant sur une <seealso cref="SalleDeReunion"/> et une <seealso cref="Periode"/>
         /// </summary>
         /// <param name="_periode">Periode de date(<see cref="DateTime"/> de la <seealso cref="Reservation"/> à annuler</param>
-        public override void AnnulerReservation(Periode _periode) => Mediateur.AnnulerReservation(this, _periode);
+        public override void AnnulerReservation(Periode _periode) => Mediateur.AnnulerReservationS(this.Reference(), _periode);
         /// <summary>
         /// Permet de verifier La disponibilite d'une <see cref="SalleDeReunion"/> pour une <seealso cref="Periode"/> donnée
         /// </summary>
         /// <param name="_periode">Periode de date à verifier</param>
         /// <returns>Un etat de disponiblité</returns>
-        public EnumDisponibilite VerifierDisponibilité(Periode _periode) => Mediateur.VerifierDisponibilite(this, _periode);
+        public EnumDisponibilite VerifierDisponibilité(Periode _periode) => Mediateur.VerifierDisponibilite(this.Reference(), _periode);
 
         /// <summary>
         /// Permet de verifier si une liste d'equipement donner est present dans la <see cref="SalleDeReunion"/>
