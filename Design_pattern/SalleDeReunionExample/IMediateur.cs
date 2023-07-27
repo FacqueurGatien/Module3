@@ -30,6 +30,8 @@ namespace SalleDeReunionExample
         /// <param name="_uniqueReservation">Un <see cref="bool"/> qui specifie si la <seealso cref="Reservation"/> de plusieurs <seealso cref="SalleDeReunion"/> est possible pour un meme <seealso cref="Employee"/> a une meme <seealso cref="Periode"/></param> (par defaut sur true)
         /// <returns>Un <see cref="bool"/> (true ou false)</returns>
         public bool ReserverSalle(Employee _employee, string _salle, Periode _periode, List<EnumEquipement> _equipements, int _capacite,bool _uniqueReservation=true);
+        public bool ReserverSalle(string _employee, string _salle, Periode _periode, List<EnumEquipement> _equipements, int _capacite, bool _UniqueReservation = true);
+        public bool ReserverSalle(string _employee, Periode _periode, List<EnumEquipement> _equipements, int _capacite, bool _uniqueReservation = true);
         /// <summary>
         /// Permet de faire les lien entre les classe et d'effectuer l'annulation d'une (ou plusieur) <see cref="Reservation"/> de <seealso cref="SalleDeReunion"/> 
         /// </summary>
@@ -46,7 +48,7 @@ namespace SalleDeReunionExample
         /// Permet de faire les lien entre les classe et d'effectuer l'annulation d'une <see cref="Reservation"/> de <seealso cref="SalleDeReunion"/> Precise
         /// </summary>
         /// <param name="_reservation">Une instance de <see cref="Reservation"/></param>
-        public void AnnulerReservation(Reservation _reservation); //Dans le cas ou un employee peut reserver plusieur salle à la meme Periode
+        public void AnnulerReservation(string _salle,string _employee,Periode _periode); //Dans le cas ou un employee peut reserver plusieur salle à la meme Periode
         /// <summary>
         /// Permet de faire le lien entre les classe et de verifier si une <see cref="SalleDeReunion"/> ne fait pas deja l'objet d'une <seealso cref="Reservation"/> pour une <seealso cref="Periode"/> precise
         /// </summary>
