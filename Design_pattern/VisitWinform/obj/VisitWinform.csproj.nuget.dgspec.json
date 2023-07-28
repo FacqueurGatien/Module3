@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\SoraDev\\Module3\\Design_pattern\\VisitWinform\\VisitWinform.csproj": {}
+    "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\VisitWinform\\VisitWinform.csproj": {}
   },
   "projects": {
-    "E:\\SoraDev\\Module3\\Design_pattern\\DesignPattern\\DesignPattern.csproj": {
+    "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\DesignPattern\\DesignPattern.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\SoraDev\\Module3\\Design_pattern\\DesignPattern\\DesignPattern.csproj",
+        "projectUniqueName": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\DesignPattern\\DesignPattern.csproj",
         "projectName": "DesignPattern",
-        "projectPath": "E:\\SoraDev\\Module3\\Design_pattern\\DesignPattern\\DesignPattern.csproj",
-        "packagesPath": "C:\\Users\\izaya\\.nuget\\packages\\",
-        "outputPath": "E:\\SoraDev\\Module3\\Design_pattern\\DesignPattern\\obj\\",
+        "projectPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\DesignPattern\\DesignPattern.csproj",
+        "packagesPath": "C:\\Users\\gafacqueur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\DesignPattern\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\izaya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gafacqueur\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,11 +33,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\SoraDev\\Module3\\Design_pattern\\Figure\\Figure.csproj": {
-                "projectPath": "E:\\SoraDev\\Module3\\Design_pattern\\Figure\\Figure.csproj"
+              "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\Figure\\Figure.csproj": {
+                "projectPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\Figure\\Figure.csproj"
               },
-              "E:\\SoraDev\\Module3\\Design_pattern\\PatternCompositeExample\\PatternCompositeExample.csproj": {
-                "projectPath": "E:\\SoraDev\\Module3\\Design_pattern\\PatternCompositeExample\\PatternCompositeExample.csproj"
+              "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\PatternCompositeExample\\PatternCompositeExample.csproj": {
+                "projectPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\PatternCompositeExample\\PatternCompositeExample.csproj"
               }
             }
           }
@@ -70,20 +71,21 @@
         }
       }
     },
-    "E:\\SoraDev\\Module3\\Design_pattern\\Figure\\Figure.csproj": {
+    "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\Figure\\Figure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\SoraDev\\Module3\\Design_pattern\\Figure\\Figure.csproj",
+        "projectUniqueName": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\Figure\\Figure.csproj",
         "projectName": "Figure",
-        "projectPath": "E:\\SoraDev\\Module3\\Design_pattern\\Figure\\Figure.csproj",
-        "packagesPath": "C:\\Users\\izaya\\.nuget\\packages\\",
-        "outputPath": "E:\\SoraDev\\Module3\\Design_pattern\\Figure\\obj\\",
+        "projectPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\Figure\\Figure.csproj",
+        "packagesPath": "C:\\Users\\gafacqueur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\Figure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\izaya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gafacqueur\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -129,20 +131,21 @@
         }
       }
     },
-    "E:\\SoraDev\\Module3\\Design_pattern\\PatternCompositeExample\\PatternCompositeExample.csproj": {
+    "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\PatternCompositeExample\\PatternCompositeExample.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\SoraDev\\Module3\\Design_pattern\\PatternCompositeExample\\PatternCompositeExample.csproj",
+        "projectUniqueName": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\PatternCompositeExample\\PatternCompositeExample.csproj",
         "projectName": "PatternCompositeExample",
-        "projectPath": "E:\\SoraDev\\Module3\\Design_pattern\\PatternCompositeExample\\PatternCompositeExample.csproj",
-        "packagesPath": "C:\\Users\\izaya\\.nuget\\packages\\",
-        "outputPath": "E:\\SoraDev\\Module3\\Design_pattern\\PatternCompositeExample\\obj\\",
+        "projectPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\PatternCompositeExample\\PatternCompositeExample.csproj",
+        "packagesPath": "C:\\Users\\gafacqueur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\PatternCompositeExample\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\izaya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gafacqueur\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -188,20 +191,21 @@
         }
       }
     },
-    "E:\\SoraDev\\Module3\\Design_pattern\\VisitWinform\\VisitWinform.csproj": {
+    "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\VisitWinform\\VisitWinform.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\SoraDev\\Module3\\Design_pattern\\VisitWinform\\VisitWinform.csproj",
+        "projectUniqueName": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\VisitWinform\\VisitWinform.csproj",
         "projectName": "VisitWinform",
-        "projectPath": "E:\\SoraDev\\Module3\\Design_pattern\\VisitWinform\\VisitWinform.csproj",
-        "packagesPath": "C:\\Users\\izaya\\.nuget\\packages\\",
-        "outputPath": "E:\\SoraDev\\Module3\\Design_pattern\\VisitWinform\\obj\\",
+        "projectPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\VisitWinform\\VisitWinform.csproj",
+        "packagesPath": "C:\\Users\\gafacqueur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\VisitWinform\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\izaya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gafacqueur\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -216,8 +220,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "E:\\SoraDev\\Module3\\Design_pattern\\DesignPattern\\DesignPattern.csproj": {
-                "projectPath": "E:\\SoraDev\\Module3\\Design_pattern\\DesignPattern\\DesignPattern.csproj"
+              "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\DesignPattern\\DesignPattern.csproj": {
+                "projectPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\DesignPattern\\DesignPattern.csproj"
               }
             }
           }

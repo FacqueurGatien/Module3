@@ -1,0 +1,12 @@
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\CompositeAtome\bin\Debug\net6.0\CompositeAtome.deps.json
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\CompositeAtome\bin\Debug\net6.0\CompositeAtome.dll
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\CompositeAtome\bin\Debug\net6.0\CompositeAtome.pdb
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\CompositeAtome\obj\Debug\net6.0\CompositeAtome.csproj.AssemblyReference.cache
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\CompositeAtome\obj\Debug\net6.0\CompositeAtome.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\CompositeAtome\obj\Debug\net6.0\CompositeAtome.AssemblyInfoInputs.cache
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\CompositeAtome\obj\Debug\net6.0\CompositeAtome.AssemblyInfo.cs
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\CompositeAtome\obj\Debug\net6.0\CompositeAtome.csproj.CoreCompileInputs.cache
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\CompositeAtome\obj\Debug\net6.0\CompositeAtome.dll
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\CompositeAtome\obj\Debug\net6.0\refint\CompositeAtome.dll
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\CompositeAtome\obj\Debug\net6.0\CompositeAtome.pdb
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\CompositeAtome\obj\Debug\net6.0\ref\CompositeAtome.dll

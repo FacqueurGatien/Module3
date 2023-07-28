@@ -1,0 +1,15 @@
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\FacadePourAtome\bin\Debug\net6.0\FacadePourAtome.deps.json
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\FacadePourAtome\bin\Debug\net6.0\FacadePourAtome.dll
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\FacadePourAtome\bin\Debug\net6.0\FacadePourAtome.pdb
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\FacadePourAtome\bin\Debug\net6.0\CompositeAtome.dll
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\FacadePourAtome\bin\Debug\net6.0\CompositeAtome.pdb
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\FacadePourAtome\obj\Debug\net6.0\FacadePourAtome.csproj.AssemblyReference.cache
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\FacadePourAtome\obj\Debug\net6.0\FacadePourAtome.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\FacadePourAtome\obj\Debug\net6.0\FacadePourAtome.AssemblyInfoInputs.cache
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\FacadePourAtome\obj\Debug\net6.0\FacadePourAtome.AssemblyInfo.cs
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\FacadePourAtome\obj\Debug\net6.0\FacadePourAtome.csproj.CoreCompileInputs.cache
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\FacadePourAtome\obj\Debug\net6.0\FacadePourAtome.csproj.CopyComplete
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\FacadePourAtome\obj\Debug\net6.0\FacadePourAtome.dll
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\FacadePourAtome\obj\Debug\net6.0\refint\FacadePourAtome.dll
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\FacadePourAtome\obj\Debug\net6.0\FacadePourAtome.pdb
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\FacadePourAtome\obj\Debug\net6.0\ref\FacadePourAtome.dll
