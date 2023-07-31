@@ -9,7 +9,8 @@
       "NousSommesTousFaitDAtome/1.0.0": {
         "dependencies": {
           "CompositeAtome": "1.0.0",
-          "FacadePourAtome": "1.0.0"
+          "FacadePourAtome": "1.0.0",
+          "IteratorAtome": "1.0.0"
         },
         "runtime": {
           "NousSommesTousFaitDAtome.dll": {}
@@ -27,6 +28,15 @@
         "runtime": {
           "FacadePourAtome.dll": {}
         }
+      },
+      "IteratorAtome/1.0.0": {
+        "dependencies": {
+          "CompositeAtome": "1.0.0",
+          "FacadePourAtome": "1.0.0"
+        },
+        "runtime": {
+          "IteratorAtome.dll": {}
+        }
       }
     }
   },
@@ -42,6 +52,11 @@
       "sha512": ""
     },
     "FacadePourAtome/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "IteratorAtome/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

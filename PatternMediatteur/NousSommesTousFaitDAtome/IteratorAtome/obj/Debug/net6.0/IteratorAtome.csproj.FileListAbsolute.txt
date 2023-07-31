@@ -1,0 +1,17 @@
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\IteratorAtome\bin\Debug\net6.0\IteratorAtome.deps.json
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\IteratorAtome\bin\Debug\net6.0\IteratorAtome.dll
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\IteratorAtome\bin\Debug\net6.0\IteratorAtome.pdb
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\IteratorAtome\bin\Debug\net6.0\CompositeAtome.dll
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\IteratorAtome\bin\Debug\net6.0\FacadePourAtome.dll
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\IteratorAtome\bin\Debug\net6.0\CompositeAtome.pdb
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\IteratorAtome\bin\Debug\net6.0\FacadePourAtome.pdb
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\IteratorAtome\obj\Debug\net6.0\IteratorAtome.csproj.AssemblyReference.cache
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\IteratorAtome\obj\Debug\net6.0\IteratorAtome.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\IteratorAtome\obj\Debug\net6.0\IteratorAtome.AssemblyInfoInputs.cache
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\IteratorAtome\obj\Debug\net6.0\IteratorAtome.AssemblyInfo.cs
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\IteratorAtome\obj\Debug\net6.0\IteratorAtome.csproj.CoreCompileInputs.cache
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\IteratorAtome\obj\Debug\net6.0\IteratorAtome.csproj.CopyComplete
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\IteratorAtome\obj\Debug\net6.0\IteratorAtome.dll
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\IteratorAtome\obj\Debug\net6.0\refint\IteratorAtome.dll
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\IteratorAtome\obj\Debug\net6.0\IteratorAtome.pdb
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\IteratorAtome\obj\Debug\net6.0\ref\IteratorAtome.dll

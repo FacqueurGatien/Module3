@@ -24,6 +24,20 @@
         "runtime": {
           "bin/placeholder/FacadePourAtome.dll": {}
         }
+      },
+      "IteratorAtome/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CompositeAtome": "1.0.0",
+          "FacadePourAtome": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/IteratorAtome.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IteratorAtome.dll": {}
+        }
       }
     }
   },
@@ -37,12 +51,18 @@
       "type": "project",
       "path": "../FacadePourAtome/FacadePourAtome.csproj",
       "msbuildProject": "../FacadePourAtome/FacadePourAtome.csproj"
+    },
+    "IteratorAtome/1.0.0": {
+      "type": "project",
+      "path": "../IteratorAtome/IteratorAtome.csproj",
+      "msbuildProject": "../IteratorAtome/IteratorAtome.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "CompositeAtome >= 1.0.0",
-      "FacadePourAtome >= 1.0.0"
+      "FacadePourAtome >= 1.0.0",
+      "IteratorAtome >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -84,6 +104,9 @@
             },
             "C:\\Users\\gafacqueur\\Documents\\Module3\\PatternMediatteur\\NousSommesTousFaitDAtome\\FacadePourAtome\\FacadePourAtome.csproj": {
               "projectPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\PatternMediatteur\\NousSommesTousFaitDAtome\\FacadePourAtome\\FacadePourAtome.csproj"
+            },
+            "C:\\Users\\gafacqueur\\Documents\\Module3\\PatternMediatteur\\NousSommesTousFaitDAtome\\IteratorAtome\\IteratorAtome.csproj": {
+              "projectPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\PatternMediatteur\\NousSommesTousFaitDAtome\\IteratorAtome\\IteratorAtome.csproj"
             }
           }
         }

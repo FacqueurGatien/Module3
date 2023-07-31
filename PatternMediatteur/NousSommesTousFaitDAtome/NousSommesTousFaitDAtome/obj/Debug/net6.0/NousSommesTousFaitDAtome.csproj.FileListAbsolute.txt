@@ -18,3 +18,5 @@ C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome
 C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\NousSommesTousFaitDAtome\obj\Debug\net6.0\ref\NousSommesTousFaitDAtome.dll
 C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\NousSommesTousFaitDAtome\bin\Debug\net6.0\FacadePourAtome.dll
 C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\NousSommesTousFaitDAtome\bin\Debug\net6.0\FacadePourAtome.pdb
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\NousSommesTousFaitDAtome\bin\Debug\net6.0\IteratorAtome.dll
+C:\Users\gafacqueur\Documents\Module3\PatternMediatteur\NousSommesTousFaitDAtome\NousSommesTousFaitDAtome\bin\Debug\net6.0\IteratorAtome.pdb

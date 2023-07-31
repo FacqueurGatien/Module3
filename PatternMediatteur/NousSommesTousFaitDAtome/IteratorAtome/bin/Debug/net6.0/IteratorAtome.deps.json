@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "IteratorAtome/1.0.0": {
+        "dependencies": {
+          "CompositeAtome": "1.0.0",
+          "FacadePourAtome": "1.0.0"
+        },
+        "runtime": {
+          "IteratorAtome.dll": {}
+        }
+      },
+      "CompositeAtome/1.0.0": {
+        "runtime": {
+          "CompositeAtome.dll": {}
+        }
+      },
+      "FacadePourAtome/1.0.0": {
+        "dependencies": {
+          "CompositeAtome": "1.0.0"
+        },
+        "runtime": {
+          "FacadePourAtome.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "IteratorAtome/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CompositeAtome/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FacadePourAtome/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
