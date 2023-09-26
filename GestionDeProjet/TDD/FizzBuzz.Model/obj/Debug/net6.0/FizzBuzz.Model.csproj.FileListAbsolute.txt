@@ -1,0 +1,12 @@
+C:\Users\gafacqueur\Documents\GestionDeProjet\TDD\FizzBuzz.Model\bin\Debug\net6.0\FizzBuzz.Model.deps.json
+C:\Users\gafacqueur\Documents\GestionDeProjet\TDD\FizzBuzz.Model\bin\Debug\net6.0\FizzBuzz.Model.dll
+C:\Users\gafacqueur\Documents\GestionDeProjet\TDD\FizzBuzz.Model\bin\Debug\net6.0\FizzBuzz.Model.pdb
+C:\Users\gafacqueur\Documents\GestionDeProjet\TDD\FizzBuzz.Model\obj\Debug\net6.0\FizzBuzz.Model.csproj.AssemblyReference.cache
+C:\Users\gafacqueur\Documents\GestionDeProjet\TDD\FizzBuzz.Model\obj\Debug\net6.0\FizzBuzz.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gafacqueur\Documents\GestionDeProjet\TDD\FizzBuzz.Model\obj\Debug\net6.0\FizzBuzz.Model.AssemblyInfoInputs.cache
+C:\Users\gafacqueur\Documents\GestionDeProjet\TDD\FizzBuzz.Model\obj\Debug\net6.0\FizzBuzz.Model.AssemblyInfo.cs
+C:\Users\gafacqueur\Documents\GestionDeProjet\TDD\FizzBuzz.Model\obj\Debug\net6.0\FizzBuzz.Model.csproj.CoreCompileInputs.cache
+C:\Users\gafacqueur\Documents\GestionDeProjet\TDD\FizzBuzz.Model\obj\Debug\net6.0\FizzBuzz.Model.dll
+C:\Users\gafacqueur\Documents\GestionDeProjet\TDD\FizzBuzz.Model\obj\Debug\net6.0\refint\FizzBuzz.Model.dll
+C:\Users\gafacqueur\Documents\GestionDeProjet\TDD\FizzBuzz.Model\obj\Debug\net6.0\FizzBuzz.Model.pdb
+C:\Users\gafacqueur\Documents\GestionDeProjet\TDD\FizzBuzz.Model\obj\Debug\net6.0\ref\FizzBuzz.Model.dll

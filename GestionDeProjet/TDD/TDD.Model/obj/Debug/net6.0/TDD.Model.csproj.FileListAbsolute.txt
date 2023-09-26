@@ -1,0 +1,12 @@
+C:\Users\gafacqueur\Documents\GestionDeProjet\TDD\TDD.Model\bin\Debug\net6.0\TDD.Model.deps.json
+C:\Users\gafacqueur\Documents\GestionDeProjet\TDD\TDD.Model\bin\Debug\net6.0\TDD.Model.dll
+C:\Users\gafacqueur\Documents\GestionDeProjet\TDD\TDD.Model\bin\Debug\net6.0\TDD.Model.pdb
+C:\Users\gafacqueur\Documents\GestionDeProjet\TDD\TDD.Model\obj\Debug\net6.0\TDD.Model.csproj.AssemblyReference.cache
+C:\Users\gafacqueur\Documents\GestionDeProjet\TDD\TDD.Model\obj\Debug\net6.0\TDD.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gafacqueur\Documents\GestionDeProjet\TDD\TDD.Model\obj\Debug\net6.0\TDD.Model.AssemblyInfoInputs.cache
+C:\Users\gafacqueur\Documents\GestionDeProjet\TDD\TDD.Model\obj\Debug\net6.0\TDD.Model.AssemblyInfo.cs
+C:\Users\gafacqueur\Documents\GestionDeProjet\TDD\TDD.Model\obj\Debug\net6.0\TDD.Model.csproj.CoreCompileInputs.cache
+C:\Users\gafacqueur\Documents\GestionDeProjet\TDD\TDD.Model\obj\Debug\net6.0\TDD.Model.dll
+C:\Users\gafacqueur\Documents\GestionDeProjet\TDD\TDD.Model\obj\Debug\net6.0\refint\TDD.Model.dll
+C:\Users\gafacqueur\Documents\GestionDeProjet\TDD\TDD.Model\obj\Debug\net6.0\TDD.Model.pdb
+C:\Users\gafacqueur\Documents\GestionDeProjet\TDD\TDD.Model\obj\Debug\net6.0\ref\TDD.Model.dll
