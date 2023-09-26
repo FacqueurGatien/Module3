@@ -8,11 +8,17 @@
     ".NETCoreApp,Version=v6.0": {
       "DesignPattern/1.0.0": {
         "dependencies": {
+          "Decorateur": "1.0.0",
           "Figure": "1.0.0",
           "PatternCompositeExample": "1.0.0"
         },
         "runtime": {
           "DesignPattern.dll": {}
+        }
+      },
+      "Decorateur/1.0.0": {
+        "runtime": {
+          "Decorateur.dll": {}
         }
       },
       "Figure/1.0.0": {
@@ -29,6 +35,11 @@
   },
   "libraries": {
     "DesignPattern/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Decorateur/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

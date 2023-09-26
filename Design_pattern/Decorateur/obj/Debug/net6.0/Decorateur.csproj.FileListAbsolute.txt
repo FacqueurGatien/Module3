@@ -1,0 +1,12 @@
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\Decorateur\obj\Debug\net6.0\Decorateur.csproj.AssemblyReference.cache
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\Decorateur\obj\Debug\net6.0\Decorateur.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\Decorateur\obj\Debug\net6.0\Decorateur.AssemblyInfoInputs.cache
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\Decorateur\obj\Debug\net6.0\Decorateur.AssemblyInfo.cs
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\Decorateur\obj\Debug\net6.0\Decorateur.csproj.CoreCompileInputs.cache
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\Decorateur\bin\Debug\net6.0\Decorateur.deps.json
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\Decorateur\bin\Debug\net6.0\Decorateur.dll
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\Decorateur\bin\Debug\net6.0\Decorateur.pdb
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\Decorateur\obj\Debug\net6.0\Decorateur.dll
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\Decorateur\obj\Debug\net6.0\refint\Decorateur.dll
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\Decorateur\obj\Debug\net6.0\Decorateur.pdb
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\Decorateur\obj\Debug\net6.0\ref\Decorateur.dll

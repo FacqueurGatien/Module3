@@ -2,10 +2,21 @@
   "version": 3,
   "targets": {
     "net6.0-windows7.0": {
+      "Decorateur/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Decorateur.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Decorateur.dll": {}
+        }
+      },
       "DesignPattern/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Decorateur": "1.0.0",
           "Figure": "1.0.0",
           "PatternCompositeExample": "1.0.0"
         },
@@ -39,6 +50,11 @@
     }
   },
   "libraries": {
+    "Decorateur/1.0.0": {
+      "type": "project",
+      "path": "../Decorateur/Decorateur.csproj",
+      "msbuildProject": "../Decorateur/Decorateur.csproj"
+    },
     "DesignPattern/1.0.0": {
       "type": "project",
       "path": "../DesignPattern/DesignPattern.csproj",

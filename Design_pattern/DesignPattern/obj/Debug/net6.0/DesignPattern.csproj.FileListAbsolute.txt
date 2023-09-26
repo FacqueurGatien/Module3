@@ -36,3 +36,5 @@ C:\Users\gafacqueur\Documents\Module3\Design_pattern\DesignPattern\obj\Debug\net
 C:\Users\gafacqueur\Documents\Module3\Design_pattern\DesignPattern\obj\Debug\net6.0\ref\DesignPattern.dll
 C:\Users\gafacqueur\Documents\Module3\Design_pattern\DesignPattern\bin\Debug\net6.0\Figure.dll
 C:\Users\gafacqueur\Documents\Module3\Design_pattern\DesignPattern\bin\Debug\net6.0\Figure.pdb
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\DesignPattern\bin\Debug\net6.0\Decorateur.dll
+C:\Users\gafacqueur\Documents\Module3\Design_pattern\DesignPattern\bin\Debug\net6.0\Decorateur.pdb

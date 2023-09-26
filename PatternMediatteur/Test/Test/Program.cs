@@ -264,7 +264,8 @@ namespace Test
     {
         public static void Main(string[] arg)
         {
-            Console.WriteLine("hello world");
+            Console.WriteLine(($"[{DateTime.Now}] {Environment.UserName}"));
+/*            Console.WriteLine("hello world");
             IMediateur mediateur = new Mediateur();
 
             SalleDeReunion s1 = new SalleDeReunion(mediateur, "Atic", 50, new List<EnumEquipement>() { EnumEquipement.Climatisation, EnumEquipement.Insonorisation });
@@ -306,7 +307,7 @@ namespace Test
             e1.EnvoyerMessage();
             e2.EnvoyerMessage();
             e3.EnvoyerMessage();
-            e4.EnvoyerMessage();
+            e4.EnvoyerMessage();*/
         }
     }
 }

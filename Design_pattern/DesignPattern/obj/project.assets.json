@@ -2,6 +2,16 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Decorateur/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Decorateur.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Decorateur.dll": {}
+        }
+      },
       "Figure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -25,6 +35,11 @@
     }
   },
   "libraries": {
+    "Decorateur/1.0.0": {
+      "type": "project",
+      "path": "../Decorateur/Decorateur.csproj",
+      "msbuildProject": "../Decorateur/Decorateur.csproj"
+    },
     "Figure/1.0.0": {
       "type": "project",
       "path": "../Figure/Figure.csproj",
@@ -38,6 +53,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Decorateur >= 1.0.0",
       "Figure >= 1.0.0",
       "PatternCompositeExample >= 1.0.0"
     ]
@@ -76,6 +92,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\Decorateur\\Decorateur.csproj": {
+              "projectPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\Decorateur\\Decorateur.csproj"
+            },
             "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\Figure\\Figure.csproj": {
               "projectPath": "C:\\Users\\gafacqueur\\Documents\\Module3\\Design_pattern\\Figure\\Figure.csproj"
             },
