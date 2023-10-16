@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Ma Premiere Application Java</string>
+    <string name="Incrementation">Incrementer</string>
+    <string name="laviestbelle">La vie est belle</string>
+    <string name="DireBonjour">Bonjour</string>
+    <string name="Decrementation">Decrementer</string>
+    <string name="Quitter">Quitter</string>
+</resources>

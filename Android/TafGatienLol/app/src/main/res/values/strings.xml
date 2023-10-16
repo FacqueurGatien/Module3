@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TafGatienLol</string>
+    <string name="adbutton">Ajouter une personne</string>
+    <string name="mssgTest">Bravo!</string>
+    <string name="nom">Nom:</string>
+    <string name="prenom">Prénom:</string>
+</resources>
